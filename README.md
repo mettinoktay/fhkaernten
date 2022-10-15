@@ -1,2 +1,5 @@
-# fhkaernten
-A repo to store projects/homeworks for my studies in FH Kärnten.
+# Fachhochschule Kärnten
+
+MSC in System Design
+
+A repo to store projects/homeworks.
