@@ -3,9 +3,105 @@ import sense_hat
 import numpy as np
 import sys
 from random import randint
+from threading import Thread
+import remi.gui as gui
+from remi import start, App
+
+
+global cycle
+cycle = 0.0
+x =0
+y =1
+z =2
+
+global left
+global right
+global rotate
+left = 0
+right = 0
+rotate = 0
+
+class MyApp(App):
+    def __init__(self, *args):
+        super(MyApp, self).__init__(*args)
+
+    def main(self):
+        container = gui.VBox(width='100%', height=300)
+        self.lbl = gui.Label('Hello world! This is TETRIS!')
+        self.btl = gui.Button('Left', width=200, height=50, margin='10px')
+        self.btr = gui.Button('Right', width=200, height=50, margin='10px')
+        subContainerRight = gui.Container(style={'width': '220px', 'display': 'block', 'overflow': 'auto', 'text-align': 'center'})
+        self.btro = gui.Button('Rotate', width=200, height=50, margin='10px')
+        self.btfs = gui.Button('Fast', width=200, height=50, margin='10px')
+        # setting the listener for the onclick event of the button
+        self.btl.onclick.do(self.on_button_pressed_left)
+        self.btr.onclick.do(self.on_button_pressed_right)
+        self.btro.onclick.do(self.on_button_pressed_rotate)
+        self.btfs.onclick.do(self.on_button_pressed_fast)
+        # appending a widget to another, the first argument is a string key
+        container.append(self.lbl)
+        container.append(self.btl)
+        container.append(self.btr)
+        container.append(self.btro)
+        container.append(self.btfs)
+        # returning the root widget
+        return container
+
+    # listener function
+    def on_button_pressed_left(self, widget):
+        global left
+        left=1
+    def on_button_pressed_right(self, widget):
+        global right
+        right=1
+    def on_button_pressed_rotate(self, widget):
+        global rotate
+        rotate=1
+    def on_button_pressed_fast(self, widget):
+        global interval, gameSpeed
+        interval = gameSpeed/5
+    
+
+# starts the web server
+
+
+class Webserver:  
+    def __init__(self):
+        self._running = True
+
+    def terminate(self):  
+        self._running = False  
+
+    def run(self):
+        start(MyApp, address='0.0.0.0', port=8081)
+
 
 sense = sense_hat.SenseHat()
 sense.clear()
+
+
+class Gyro:  
+    def __init__(self):
+        self._running = True
+
+    def terminate(self):  
+        self._running = False  
+
+    def run(self):
+        global cycle
+        while self._running:
+            acceleration = sense.get_accelerometer_raw()
+            global x
+            global y
+            global z
+            x = acceleration['x']
+            y = acceleration['y']
+            z = acceleration['z']
+
+            x=round(x, 1)
+            y=round(y, 1)
+            z=round(z, 1)
+      
 
 #variables for convenience
 left_key = sense_hat.DIRECTION_LEFT
@@ -20,7 +116,7 @@ released = sense_hat.ACTION_RELEASED
 playfieldSize = 10
 
 #speed of game
-gameSpeed = 0.5
+gameSpeed = 0.8
 
 #variables that need to be declared before main game loop
 lft = 0.0
@@ -155,6 +251,18 @@ def restartGame():
     clearPlayground()
     score = 0
     generateBlock()
+#Create Class
+Gyro = Gyro()
+#Create Thread
+GyroThread = Thread(target=Gyro.run) 
+#Start Thread 
+GyroThread.start()
+
+Webserver = Webserver()
+#Create Thread
+WebserverThread = Thread(target=Webserver.run) 
+#Start Thread 
+WebserverThread.start()
 
 # generate first block, no need to check for collision at start
 generateBlock()
@@ -166,7 +274,9 @@ while True:
     dt = ct - lft
     lft = ct
     timeCounter += dt
-    
+
+    #print("x={0}, y={1}, z={2}".format(x, y, z))
+     
     events = sense.stick.get_events()
     if events:
         for e in events:
@@ -202,8 +312,31 @@ while True:
             if e.direction == down_key and e.action == pressed and gameOver:
                 sense.clear()
                 sys.exit()
-
+   
     if(timeCounter > interval):
+        #print("x={0}, y={1}, z={2}".format(x, y, z))
+        #print("r={0}, l={1}, rot={2}".format(right, left, rotate))
+        if (x > 0.3 or right == 1):
+            right =0
+            if not checkCollision(0,-1):
+                if activeBlock_y < 8:
+                    activeBlock_y += 1
+        if (x < -0.3 or left == 1):
+            left =0
+            if not checkCollision(0,-1):
+                if activeBlock_y < 8:
+                    activeBlock_y -= 1          
+        if (y < -0.3 or rotate == 1):
+            rotate =0
+            itmpDir = activeBlock_dir
+            activeBlock_dir = (activeBlock_dir + 1) % 4
+            if checkCollision(0,0):
+                activeBlock_dir = tmpDir
+        if (y > 0.3):
+            interval = gameSpeed/5
+        else:
+            interval = gameSpeed
+        
         timeCounter = 0
         if not gameOver:
             if not checkCollision(1,0):
@@ -228,12 +361,70 @@ while True:
                     msg = str(score) + " pts!"
                     sense.show_message(msg, scroll_speed=0.07)
                     clearPlayground();
-                    gameOver = True 
+                    #gameOver = True 
             drawPlayfield()
             drawActiveBlock()
         else:
             sense.set_pixels
             (arrow)
+            
+            
+            
+          
+          
+          
+          
+          
+         
+         
+         
+         
+         
+         
+         
+        
+       
+       
+       
+      
+      
+      
+      
+     
+     
+     
+     
+     
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
