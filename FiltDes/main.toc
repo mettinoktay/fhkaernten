@@ -1,1 +1,2 @@
-\contentsline {section}{\numberline {1}}{2}{}%
+\contentsline {section}{\numberline {1}Sampling Process and Z-Transformation}{2}{}%
+\contentsline {section}{\numberline {2}Filter Implementations: FIR Filter}{2}{}%

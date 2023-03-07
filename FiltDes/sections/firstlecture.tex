@@ -1,3 +1,75 @@
-\section{}
+\section{Sampling Process and Z-Transformation}
 
 \textbf{07.03.2023 - Lecture 1 - EDV3}
+
+$$x(t) = \sum_{k=0}^{\infty}x[kT]* \delta(t-kT)$$
+
+Sampling means that a signal from analog world is transferred into the digital world by means of periodic measurement and saving-to-memory.
+
+Laplace Transform is as follows:
+
+\begin{align*}
+	X(s) &= \sum_{k=0}^{\infty}x[kT]*e^{-kTs} \\
+	x(t) &= x[0]\delta(t) + x[1]\delta(t-T) + x[2]\delta(t-2T) ... \\
+	X(s) &= X[0] + X[1]e^{-sT} + X[2]e^{-2sT} + ... \\
+	   z &= e^{sT} \\
+	X[z] &= X[0] + X[1]z^{-1} + X[2]z^{-2} \\
+\end{align*}
+
+\textbf{Note:} In z-plane, for stability, the roots must not rely outside of the unit circle (similar to s-plane and poles must rely on the left-hand side plane).
+
+\section{Filter Implementations: FIR Filter}
+
+A simple form of Finite Impulse Response filter is as follows:
+
+$$H(z) = c_0 +c_1z^{-1}+c_2z^{-2} = \frac{z^{2}c_0 +zc_1+c_2}{z^2}$$
+
+
+Since there is no feedback, \hl{an FIR filter is always stable}. All poles are located at the origin.
+
+$$ \frac{Y(z)}{X(z)} = H(z) = c_0 + c_1z^{-1}+c_2z^{-2} $$
+
+$$ Y(Z) = X(z)(c_0 + c_1z^{-1}+c_2z^{-2}) $$
+
+Transform the system from z-domain into time domain as follows:
+
+$$y[k] = c_0x[k] + c_1x[k-1] + c_2x[k-2]$$
+
+\textbf{Example:}
+
+$$ H(z) = c_0 + c_1z^{-1} + c_3z^{-3} $$
+
+\begin{itemize}
+	\item[1.] What is the difference equation?
+\end{itemize}
+$$y[k] = c_0x[k] + c_1x[k-1] + c_3x[k-3]$$
+
+\begin{itemize}
+	\item[2.] Represent the equation graphically.
+\end{itemize}
+
+It is the same process that we went through in today's Applied Signal Processing class.
+
+\textbf{Example:}
+
+$$y[k] = 3x[k] + 2x[k-1] - x[k-2]$$
+
+\begin{itemize}
+	\item[1.] Represent the equation graphically.
+\end{itemize}
+
+\begin{itemize}
+	\item[2.] Output sequence for input $x[0] = 2$, $x[1] = 3$, $x[2] = 1$ and zero initial conditions.
+\end{itemize}
+
+\textbf{Example:}
+
+$$y[k] = -x[k-2] + 2x[k-1] + 3x[k]$$
+
+\begin{itemize}
+	\item[1.] Output sequence for input $x[0] = 2$, $x[1] = 3$, $x[2] = 1$ and zero initial conditions.
+\end{itemize}
+
+
+
+
