@@ -1,0 +1,110 @@
+\textbf{02.03.2023 - Lecture 1 - Seminarraum 11}
+
+\vspace{5mm}
+\textbf{General Notes}
+
+\itemize{
+	\item 	only two sessions will be blended learning. their exercises are mandatory (affects \%10 the final mark). Final exam: required to score \%50 at least.
+
+	\item 5 matlab exercises, each of which affects the final mark \%5.
+
+	\item all the dates are announced.
+}
+\textbf{Implementation of Discrete-Time Systems}
+
+Review of Discrete-time Systems: input output behavior of discrete time systems can be described by difference equation, with constant coeffs $a_k$ and $b_k$.
+
+$$
+y[n] = \sum_{k=1}^{N} a_k*y[n-k] + \sum_{k=0}^{M} b_k*x[n-k]
+$$
+
+where $x[n]$ are the current input samples, $x[n-k]$ are the previous input samples. Term on the left represents previous output samples, terms on the right reps input values.
+
+\textbf{Implementation of Discrete-Time Systems}
+
+Impulse reponse $h[n]$ is the output for $x[n] = \delta[n]$.
+
+Step response $s[n]$ is the output for unit pulse sequence $x[n] = \sigma[n]$.
+
+Step response and impulse response are connected: $$ s[n] = \sum_{k=-\infty}^{n}h[k]$$
+
+Frequency response $H[\Omega]$: The horizontal axis on the frequency-amplitude graph is the ratio between sampling frequency and the frequency of the applied signal. It is only showed up to ratio of 0.5 because there should not be any useful info after this frequency. It is advantageous to use logarithmic scaling in such graphs. Following was written along with text \textit{normalized frequency.}
+
+$$\Omega = 2\pi \frac{f}{f_s}$$
+
+$$ h[n] \rightarrow FFT \rightarrow H[\Omega] $$
+
+System transfer function of discrete time systesm are obtained by \textit{z-transform}: (check the supplementary material  for z-transform.)
+
+$$ h[n] \rightarrow z\ transform \rightarrow H[z] $$
+
+\textbf{Example 1:}
+
+Using the following difference equation:
+$$ y[n] = b_0*x[n] + b_1*x[n-1] + a_1*y[n-1] $$
+
+Determine:
+
+\item Impulse response
+\item System transfer function
+
+
+\textbf{Solution:}
+
+
+\item Recall the impulse function. Input signal $x[n] = \delta[n]$
+\begin{align*}
+	y[-1] &= b_0*x[-1] + b_1*x[-1-1] + a_1*y[-2] = 0 \\
+	y[0] &= b_0*x[0] + b_1*x[-1] + a_1*y[-1] = 0 \\
+	y[1] &= b_0*x[1] + b_1*x[0] + a_1*y[0] = b_1 + a_1*b_0
+\end{align*}
+
+
+\textbf{Homework:} Continue on calculation.
+
+\item Develop the transfer function from the given difference equation.
+\begin{align*}
+	Y(z) &= b_0.X(z) + b_1.X(z).z^{-1} + a_1.Y(z).z^{-1} \\
+	Y(z)(1-a_1.z^{-1}) &= X(z)(b_0 + b_1z^{-1}) \\
+	H(z) &= \frac{Y(z)}{X(z)} = \frac{b_0+b_1z^{-1}}{1-a_1z^{-1}}
+\end{align*}
+
+
+\textbf{Example 2:}
+
+Using the following difference equation:
+$$ y[n] = 3*x[n] - x[n-1] + 0.5*y[n-1] $$
+
+Determine:
+
+\item Impulse response
+\item Step response
+\item System transfer function
+
+
+\textbf{Solution:}
+
+\item Recall the impulse function. Input signal $x[n] = \delta[n]$
+\begin{align*}
+y[-1] &= 3*0 - 0 + 0.5*0 = 0 \\
+	y[0] &= 3*1 - 0 + 0.5*0 = 3 \\
+	y[1] &= 3*0 - 1*1 + 0.5*3 = 0.5 \\
+	y[2] &= 3*0 - 1*0 + 0.5*0.5 = 0.25 \\
+	y[3] &= 3*0 - 1*0 + 0.5*0.25 = 0.125 \\
+	y[4] &= 0.5*y[3] = 0.0625 \\
+	y[n] &= 0.5*y[n-1]
+\end{align*}
+
+\item Recall the step function. Input signal $x[n] = \sigma[n]$
+\begin{align*}
+y[-1] &= 3*0 - 0 + 0.5*0 = 0 \\
+	y[0] &= 3*1 - 0 + 0.5*0 = 3 \\
+	y[1] &= 3*1 - 1*1 + 0.5*3 = 3.5 \\
+	y[2] &= 3*1 - 1*1 + 0.5*3.5 = 3.75 \\
+	y[3] &= 3*1 - 1*1 + 0.5*3.75 =  3.875\\
+	y[n] &= 2 + 0.5*y[n-1]
+\end{align*}
+
+\item System transfer function:
+
+$$	H(z) = \frac{Y(z)}{X(z)} = \frac{b_0+b_1z^{-1}}{1-a_1z^{-1}} = \frac{3-z^{-1}}{1 - 0.5z^{-1}} $$

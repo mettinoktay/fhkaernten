@@ -1,0 +1,88 @@
+\newpage
+\textbf{07.03.2023 - Lecture 2 - Seminarraum 11}
+
+This lecture started with block diagram representation of mathematical representations of discrete systems.
+
+\textbf{Example:} Draw the block diagram of the below respresentation.
+
+$$ y[n] = 3x[n]-x[n-1]+0.5y[n-1]$$
+
+\begin{center}
+	\begin{tikzpicture}
+		% Sum shape
+		\node[draw,
+		circle,
+		minimum size=0.6cm,
+		fill=Rhodamine!50
+		] (sum) at (0,0){};
+
+		\draw (sum.north east) -- (sum.south west)
+		(sum.north west) -- (sum.south east);
+
+		\draw (sum.north east) -- (sum.south west)
+		(sum.north west) -- (sum.south east);
+
+		\node[left=-1pt] at (sum.center){\tiny $+$};
+		\node[below] at (sum.center){\tiny $-$};
+
+		% Controller
+		\node [draw,
+		fill=Goldenrod,
+		minimum width=2cm,
+		minimum height=1.2cm,
+		right=1cm of sum
+		]  (controller) {$C(s)$};
+
+		% System H(s)
+		\node [draw,
+		fill=SpringGreen,
+		minimum width=2cm,
+		minimum height=1.2cm,
+		right=1.5cm of controller
+		] (system) {$H(s)$};
+
+		% Sensor block
+		\node [draw,
+		fill=SeaGreen,
+		minimum width=2cm,
+		minimum height=1.2cm,
+		below right= 1cm and -0.25cm of controller
+		]  (sensor) {$G(s)$};
+
+		% Arrows with text label
+		\draw[-stealth] (sum.east) -- (controller.west)
+		node[midway,above]{$e$};
+
+		\draw[-stealth] (controller.east) -- (system.west)
+		node[midway,above]{$u$};
+
+		\draw[-stealth] (system.east) -- ++ (1.25,0)
+		node[midway](output){}node[midway,above]{$y[n]$};
+
+		\draw[-stealth] (output.center) |- (sensor.east);
+
+		\draw[-stealth] (sensor.west) -| (sum.south)
+		node[near end,left]{$y_m$};
+
+		\draw (sum.west) -- ++(-1,0)
+		node[midway,above]{$x[n]$};
+	\end{tikzpicture}
+\end{center}
+
+\textbf{Implementation of Discrete-time Systems}
+
+IIR (Infinite impulse response). Due to the feedback part, the impulse response can be considered infinitely long.
+
+Because of the feedback, IIR systems are also called recursive systems (filters (does it also mean they are filters?)). It is also possible that such systems can be instable. THerefore stability criteria has to be considered in the design process.
+
+Order of the system is equal to the number of delayed output elements.
+
+Good filter characteristics are achievabe with low filter orders, which also mean higher operational speeds. The disadvantage is that there is no linear phase characteristics.
+
+The system function for an Nth order IIR-System is as follows:
+
+$$
+\boxed{H(z) = \frac{\displaystyle \sum_{k=1}^{M}b_kz^{-k}}{\displaystyle 1-\sum_{k=1}^{N}a_kz^{-k}} = \frac{B(z)}{A(z)} = H_1(z)*H_2(z)}
+$$
+
+H1 = B(z) is the feedforward part, H2 = 1/A(z) is the feedback part.
