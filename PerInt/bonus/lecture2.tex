@@ -1,0 +1,22 @@
+\documentclass[12pt,a4paper]{letter}
+\usepackage[latin1]{inputenc}
+\pagenumbering{gobble}
+
+\begin{document}
+	\textbf{09.03.2023 - Peripheral Interfacing}
+
+	\textbf{Bonus Task 2}\\
+
+	\textbf{Question:} Elaborate on the topic of embedded system dependability. How would an engineer know if an embedded system is dependable?
+
+	\textbf{Answer:} To depend means \textit{to place reliance or trust.} For a system to be called dependable, it should rarely remind its existence. That means, the system must:
+
+	\begin{itemize}
+		\item handle exceptional occurences. For example, an unexpected physical or electrical shock during its operation should not cause a halt; e.g. the embedded system should be mounted on a shock-absorbing housing, or high voltage protection circuit on its power input terminals.
+		\item handle natural elements. That is, its components should be corrosion proof or waterproof.
+		\item handle component failures. That is, the components under heavy use, like a sensor or a driver, should be redundant.
+		\item handle every situation that it was marketed to handle. This means that its firmware should be sophisticated, well- and thoroughly-tested, and if possible maintained after sale.
+		\item alert its user or operator when an exception that is beyond its handling capabilities occurs. The number of such alerts must also be low.
+	\end{itemize}
+
+\end{document}
