@@ -1,0 +1,99 @@
+\section{Cascade and Parallel Form}
+\textbf{09.03.2023 - Lecture 3 - Seminarraum 12}\\
+
+To develop a new way to represent which also achives...
+
+\begin{itemize}
+	\item Splitting of higher order system in a aseries of systems of lower order
+	\item Factoring the numerator and denominator polynomials
+
+	$$
+	H(z) =
+	\frac{\displaystyle \prod_{k=1}^{M_1}(1-f_kz^{-1}) \prod_{k=1}^{M_2}(1-g_kz^{-1})(1-g^*_kz^{-1})}
+		 {\displaystyle \prod_{k=1}^{N_1}(1-c_kz^{-1}) \prod_{k=1}^{N_2}(1-d_kz^{-1})(1-d^*_kz^{-1})}
+	$$
+
+	\item Desirable to implement with minimum of storage and computation
+	\item Modular structure combining pairs of real factors and complex conjugate pairs into second-order factors, expressed as:
+
+	$$
+	H(z) =
+	\displaystyle \prod_{k=1}^{M_1}\frac{b_0k+b_{1k}z^{-1}+b_{2k}z^{-1}}{1-a_{1k}z^{1}-a_{2k}z^{2}}
+	$$
+
+	where (assuming $M \leq N$):
+	$$N(s) = (N+1)+2$$
+
+\end{itemize}
+
+\textbf{Example:}
+
+$$ H(z) = \frac{1+2\z + \zz}{1-0.75\z+0.125\zz}$$
+
+To illustrate the cascade structure, we will split the second-order system incascade of first-order systems.
+
+\begin{itemize}
+	\item Determine poles and zeros:\\
+
+	$B(z) = 0 \rightarrow$ Numerator polynomial\\
+	$A(z) = 0 \rightarrow$ Denominator polynomial\\
+
+	Multiply polynomials to get rid of negative powers. Then it is just akin to solving a polynomial.
+	\newpage
+
+	\textbf{\color{Red} Zeros:}
+
+	$$z^2 + 2z + 1 = 0$$
+	$$ z_{0,1} = -1$$
+
+	\textbf{\color{Red} Poles:}
+
+	$$z^2 -0.75z + 0.125 = 0$$
+	$$ z_{\infty} = \frac{1}{2}, \frac{1}{4}$$
+
+	\item Determine {\color{Red} $H_1(z)$ and $H_2(z)$}
+
+	$$ H(z) = \frac{(1+\z)(1+\z)}{(1-0.5\z)(1-0.25\z)} $$
+
+	$$ = \frac{1+\z}{1-0.5\z} . \frac{1+\z}{1-0.25\z} $$\\
+
+	The fraction on the left is $H_1(z)$ and on the right is $H_2(z)$\\
+
+	\item Direct form 1
+
+	\item Direct form 2
+
+\end{itemize}
+
+\section{Cascade of Second Order Sections (SOS) Structures (aka biquads)}
+
+Number of multiplications is in general 5. By extracting the leading coefficient: 4 multp. + 1 coefficient.
+
+A rational system transfer function H(z) can be expressed by partial fraction expansion in the form of sum of:
+\begin{itemize}
+	\item first order system with real poles
+	\item second order systems with a pair of complex conjugate poles
+	\item scaled delay element (e.g. $c_0\z + c_1\zz$)
+\end{itemize}
+
+$H(z)$ can be interpreted as parallel combination of first- and second-order IIR systems with possibly $N_p$ simple scaled delay paths. \\
+
+\textbf{Example:} Consider again:
+$$ H(z) = \frac{1+2\z + \zz}{1-0.75\z+0.125\zz}$$
+
+By applying partial fraction expansion, develop a parallel structure.
+
+\begin{itemize}
+	\item Perform long division, if $M \geq N$:
+	M is the degree of the denominator, N is the degree of numerator. In this case, they are both 2, so $M \geq N$
+	$${(\zz+2\z+1)}:{(0.125\zz-0.75\z+1)} = 8$$
+
+	Here went on some interesting stuff. The right hand polynomial was multiplied by 8 and the result was subtracted from the left hand polynomial and it resulted $8\z-7$.
+
+	$$H(z) = 8+\frac{8\z-7}{(1-0.5\z)(1-0.25\z)}$$
+
+	$$H(z) = 8 +\frac{18}{1-0.5\z} + \frac{-25}{1-0.25\z}$$
+
+	\item Draw the parallel structure with first order systems.
+
+\end{itemize}

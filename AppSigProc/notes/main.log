@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.18)  7 MAR 2023 10:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.18)  9 MAR 2023 09:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -443,23 +443,23 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count295
 \l__pdf_internal_box=\box63
 )
-(./main.aux (./firstlecture.aux) (./secondlecture.aux))
+(./main.aux (./firstlecture.aux) (./secondlecture.aux) (./thirdlecture.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -521,53 +521,107 @@ e
 
 
 (./firstlecture.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Overfull \hbox (9.5003pt too wide) in paragraph at lines 30--31
+[]\T1/cmr/m/n/12 Frequency re-sponse $\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 [
+]$\T1/cmr/m/n/12 : The hor-i-zon-tal axis on the frequency-amplitude
+ []
+
+[1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) [3]
 \openout2 = `secondlecture.aux'.
 
- (./secondlecture.tex) [4
+
+(./secondlecture.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+) [4
 
 
 
 ]
-(./main.aux (./firstlecture.aux) (./secondlecture.aux)) ) 
+\openout2 = `thirdlecture.aux'.
+
+ (./thirdlecture.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
+
+[5
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+[6]) [7] (./main.aux (./firstlecture.aux) (./secondlecture.aux)
+(./thirdlecture.aux)) ) 
 Here is how much of TeX's memory you used:
- 14046 strings out of 480247
- 279258 string characters out of 5896150
- 542845 words of memory out of 5000000
- 31737 multiletter control sequences out of 15000+600000
- 477876 words of font info for 54 fonts, out of 8000000 for 9000
+ 14081 strings out of 480247
+ 280159 string characters out of 5896150
+ 544132 words of memory out of 5000000
+ 31763 multiletter control sequences out of 15000+600000
+ 479421 words of font info for 56 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,9n,89p,457b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/metti/.texlive
-2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/metti/.texliv
-e2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/metti/.texli
-ve2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/metti/.texl
-ive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (4 pages, 126523 bytes).
+ 84i,9n,89p,457b,673s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/metti/.texlive2021/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecti1200.600pk> </home/metti/.texlive2021/texmf-var/fonts/pk/ljfour/jk
+nappen/ec/ecrm1200.600pk> </home/metti/.texlive2021/texmf-var/fonts/pk/ljfour/j
+knappen/ec/tcrm1200.600pk> </home/metti/.texlive2021/texmf-var/fonts/pk/ljfour/
+jknappen/ec/ecbx1200.600pk> </home/metti/.texlive2021/texmf-var/fonts/pk/ljfour
+/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (7 pages, 151734 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 253 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,5 @@
-\newpage
-\textbf{07.03.2023 - Lecture 2 - Seminarraum 11}
+\section{Block Diagram Representation}
+\textbf{07.03.2023 - Lecture 2 - Seminarraum 11}\\
 
 This lecture started with block diagram representation of mathematical representations of discrete systems.
 
@@ -69,7 +69,7 @@ $$ y[n] = 3x[n]-x[n-1]+0.5y[n-1]$$
 	\end{tikzpicture}
 \end{center}
 
-\textbf{Implementation of Discrete-time Systems}
+\section{Implementation of Discrete-time Systems}
 
 IIR (Infinite impulse response). Due to the feedback part, the impulse response can be considered infinitely long.
 
@@ -85,4 +85,4 @@ $$
 \boxed{H(z) = \frac{\displaystyle \sum_{k=1}^{M}b_kz^{-k}}{\displaystyle 1-\sum_{k=1}^{N}a_kz^{-k}} = \frac{B(z)}{A(z)} = H_1(z)*H_2(z)}
 $$
 
-H1 = B(z) is the feedforward part, H2 = 1/A(z) is the feedback part.
+$H_1 = B(z)$ is the feedforward part, $H_2 = \frac{1}{A(z)}$ is the feedback part.
