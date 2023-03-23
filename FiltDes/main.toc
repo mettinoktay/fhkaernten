@@ -1,2 +1,4 @@
 \contentsline {section}{\numberline {1}Sampling Process and Z-Transformation}{2}{}%
 \contentsline {section}{\numberline {2}Filter Implementations: FIR Filter}{2}{}%
+\contentsline {section}{\numberline {3}Direct Implementation (Biquad)}{4}{}%
+\contentsline {section}{\numberline {4}Fast Fourier Transform}{5}{}%

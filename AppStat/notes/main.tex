@@ -1,7 +1,13 @@
 \documentclass[12pt, a4paper, dvipsnames]{article}
-\usepackage[left=1.5in, right=1.5in, top=1.5in, bottom=1.5in]{geometry}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+\usepgfplotslibrary{external}
+\tikzexternalize
+
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -9,9 +15,12 @@
 \usepackage{nicefrac, xfrac}
 \usetikzlibrary{positioning}
 \usepackage{xcolor}
+\usepackage{gensymb}
+\newcommand{\ofat}{one-factor-at-a-time}
 
 \begin{document}
+	\include{sections/title.tex}
 	\tableofcontents
-	\include{firstlecture.tex}
-	\include{secondlecture.tex}
+	\include{sections/firstlecture.tex}
+	\include{sections/secondlecture.tex}
 \end{document}

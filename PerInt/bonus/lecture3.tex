@@ -7,13 +7,15 @@
 
 	\textbf{Bonus Task 3}\\
 
-	\textbf{Question:}
+	\textbf{Question:} Compare the different communication protocols that were explained in the class.
 
-	\textbf{Answer:}
+	\textbf{Answer:} Protocols can be classified into two with regard to their nature: Single-ended protocols and differential pair protocols.
 
 	\begin{itemize}
-		\item
-		\item
+		\item Single-ended protocols employ the concept that logic 1 and logic 0 are fixed level of voltages. I\textsuperscript{2}C, SPI, RS232 are such examples.
+
+		\item Differential pair protocols rely on the potential difference between two terminals. As in, logic 1 means V\textsubscript{TerminalA} $>$ V\textsubscript{TerminalB} and vice versa. USB, RS485, CAN-Bus, or Ethernet are examples to this protocol.
 	\end{itemize}
 
+	The fundamental difference between the two are the immunity to EMI. When a pair of cables are twisted, the effect of EMI is countered: Easy solution and costs practically nothing. Also, since the differential pair carries data in the form of voltage difference, it is possible to increase data transmission rate dramatically by designing around a tiny voltage difference. This inherent capability and immunity to EMI pushes differential pair protocols forward.
 \end{document}

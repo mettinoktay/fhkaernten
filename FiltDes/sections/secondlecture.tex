@@ -1,0 +1,51 @@
+\section{Direct Implementation (Biquad)}
+
+$$\frac{Y(z)}{X(z)} = \frac{b_0 + b_1z^{-1}+b_2z^{-2}}{1 + a_0z^{-1} + a_2z^{-2}}$$
+
+$$Y(z)(1 + a_1z^{-1} + a_2z^{-2}) = X(z)b_0 + b_1z^{-1}+b_2z^{-2}$$
+
+Keep in mind that z-transofmraiton is just Laplace tranformation for discrete systems. Apply inverse transformation to obtain the output funciton in discrete-time domain:
+
+$$Y[k] + a_1y[k-1] + a_2y[k-2] = b_0x[k] + b_1x[k-1]+b_2x[k-2]$$
+
+$$Y[k] = b_0x[k] + b_1x[k-1]+b_2x[k-2] - a_1y[k-1] - a_2y[k-2]$$\\
+
+Graphical representation is left for after-traning.\\
+
+\textbf{Note:} In real life, z (delay) block is a memory element. It stores the state for one cycle. Also, the stability criteria for IIR system is that the roots of denominator rely within the limit circle. This has been shown on the first lecture. \\
+
+\textbf{Example:} Given $\nicefrac{Y(z)}{X(z)} = \frac{2z-3}{z-0.5}$
+
+\begin{itemize}
+	\item Difference equation?
+
+	$$ H(z) = \frac{(2z-3)/z}{(z-0.5)/z} = \frac{2 - 3z^{-1}}{1-0.5z^{-1}} $$
+
+	$$ Y(z)(1 - 0.5\z) = X(z)(2-3\z)$$
+	$$ y[k] = 2x[k] - 3x[k-1] + 0.5y[k-1] $$
+
+	\item Graphical representation?
+
+	Left for after-traning.
+
+	\item Memory update table
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			$x[k]$ & 1 & 0 & 0 & 0 & 0 \\
+			\hline
+			$y[k]$ & 2 & -2 & -1 & -0.5 &  \\
+			\hline
+		\end{tabular}
+	\end{center}
+
+	The system is stable. As it is obvious from the root of the denominator (it is 0.5; it relies within the unit circle), the filter is stable.
+\end{itemize}
+
+\newpage
+
+\section{Fast Fourier Transform}
+
+Professor never had to calculate FFT by hand in his 25-year-long career. However, he used FFT tools extensively.
+
+We must go back to theory again, the professor said after the students could not determine the problem

@@ -1,0 +1,143 @@
+\section{Something}
+
+Something something - arrived 16 minutes late.
+
+We take the time from the first exp. That would be minutes. Best set of factors with "\ofat" is:
+
+$t = 130$ mins; $T = 225$ \degree C
+
+If I start now and check the time at 200 \degree C.
+
+Basic idea of DoE: paradigm change
+
+Target oriented method instead of \ofat for onderstanding (or optimising) the process or product.
+
+Slogan: Investigate many factors $x_1, x_2, x_3, ... , x_n$ (input variables) with few levels instead of few factors with many levels. Therefore we get the following DoE procedure:
+
+\begin{itemize}
+	\item[1] Recognise and describe the problem
+	\item[2] Decide on the input parameters (factors) and their levels
+	\item[3] Choose the appropriate response variable or variables
+	\item[4] Design the experiment
+	\item[5] Perform the experiment and measure the outcome of each run
+	\item[6] Evaluate the dataset
+	\item[7] Finalize and document the results
+\end{itemize}
+
+\section{Factorial Designs}
+
+Let's say we have two factors $x_1, x_2$. We now choose the levels: Two levels for $x_1$, three levels for $x_2$. Altogether we have 6 combinations, which means 6 runs. This is called a $2*3$ factorial design. In general we have more than 2 factors: $x_1, x_2, x_3 ... x_p$
+
+\begin{center}
+
+	$x_1$: $l_1$ levels\\
+	$x_2$: $l_2$ levels\\
+	$x_3$: $l_3$ levels\\
+	\dots \\
+	$x_p$: $l_p$ levels\\
+
+\end{center}
+
+We have in total:
+	$$l_1*l_2*...*l_p$$
+
+factorial design. A speecial case is that each factor is varied on exactly two levels. This is called $2^p$ factorial design. \\
+
+\textbf{Example:}\\
+
+$p=2$ (2 factors) at 2 levels $\rightarrow 2^2$ factorial design\\
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		\rule[-1ex]{0pt}{2.5ex} num & factor $x_1$ & factor $x_2$ & mass flow  & temperature & depos. rate & notation \\
+		\hline
+		\rule[-1ex]{0pt}{2.5ex} 1 & - & - & 1000 sccm & 680 \degree C & 140 nm/min & $y_1$ \\
+		\hline
+		\rule[-1ex]{0pt}{2.5ex} 2 & + & - & 1500 sccm & 680 \degree C & 372 nm/min & $y_2$ \\
+		\hline
+		\rule[-1ex]{0pt}{2.5ex} 3 & - & + & 1000 sccm & 750 \degree C & 428 nm/min & $y_3$ \\
+		\hline
+		\rule[-1ex]{0pt}{2.5ex} 4 & + & + & 1500 sccm & 750 \degree C & 500 nm/min & $y_4$ \\
+		\hline
+	\end{tabular}
+\end{center}
+
+TODO: Make a massfow-temperature cartesian graph and point out the deposition rates.
+
+%\begin{center}
+%	\begin{tikzpicture}
+%		\begin{axis}[
+%			axis lines = left,
+%			xlabel = \(x\),
+%			ylabel = {\(f(x)\)},
+%			]
+%			%Below the red parabola is defined
+%			\addplot [
+%			domain=-10:10,
+%			samples=100,
+%			color=red,
+%			]
+%			{2};
+%			\addlegendentry{\(x^2 - 2x - 1\)}
+%			%Here the blue parabola is defined
+%			\addplot [
+%			domain=-10:10,
+%			samples=100,
+%			color=blue,
+%			]
+%			{1};
+%			\addlegendentry{\(x^2 + 2x + 1\)}
+%		\end{axis}
+%	\end{tikzpicture}
+%\end{center}
+
+Main effect mass flow:
+
+TODO correct this: $$\frac{500+372}{2} - \frac{2}{1}$$
+
+Main effect temperature:
+
+$$\frac{428 + 500}{2} - \frac{140+372}{2} = 208$$
+
+If we change the temperature from 680 \degree C to 750 \degree C, the deposition rate changes by 208 nm/min, averaged over the mass flow. \\
+
+3) What is the effect of the temperature on the deposition rate, if we change the temperature from \degree C to 750 \degree C and differentiate between the massflow.
+
+Interaction between temperature and massflow (aka interaction temperature * massflow)
+
+$$\frac{128-288}{2} = -80 = \frac{(y_4-y_2) - (y_3-y_1)}{2} = \frac{y_1+y_4}{2} - \frac{y_2+y_3}{2}$$
+
+If we change the temperature from 680 \degree C to 750 \degree C and differentiate between the massflow, the deposition rate is changed by -80 nm/min \\
+
+4) What is the effect of massflow on the deposition rate if we change the massflow from 1000 sccm to 1500 sccm and differentiate between the temperature?
+
+$$\frac{72-232}{2} = -80 = \frac{(y_4-y_3) - (y_2-y_1)}{2} = \frac{y_1+y_4}{2} - \frac{y_2+y_3}{2}$$
+
+If we change the massflow from 1000 sccm to 1500 sccm and differentiate between the temperature, the deposition rate is again changed by -80 nm/min. \\
+
+If the temperature range of 680 \degree C and 750 \degree C and the mass flow range of 1000 sccm and 1500 sccm, the temperature has the strongest effect on the deposition rate, followed by the mass flow and the interaction.
+
+We can now visualize the results:
+
+Main effect plots:
+
+TODO: Draw two cartesian graphs. one is massflow [sccm] - deposition rate [nm/min] the other is temperature [\degree C] - deposition rate [nm/min]
+\begin{center}
+
+	First plot:\\
+	1000 sccm - 281 nm/min\\
+	1500 sccm - 436 nm/min
+
+	Main effect mass flow: $\Delta = 152$
+
+	Second plot:\\
+	680 \degree C - 256 nm/min\\
+	750 \degree C - 464 nm/min
+
+	Main effect temperature: $\Delta = 208$
+\end{center}
+
+there are many graphs drawn here. got lost.
+
+cornerstone software is used to analyse the dataset.

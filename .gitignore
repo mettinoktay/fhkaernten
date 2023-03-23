@@ -2,3 +2,5 @@
 *.log
 *.aux
 *.gz
+*.auxloc
+*.md5
