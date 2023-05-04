@@ -1,0 +1,67 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage{lmodern,textcomp}
+\title{Temperature Measurement of An FDM 3D Printer Hotend with a PTC
+Thermistor}
+\author{Metin Oktay Yılmaz}
+\begin{document}
+    \maketitle
+
+    \section*{Introduction}
+    An FDM 3D printer can utilize a variety of plastics ranging from PLA to
+    ABS, even TPU. Succesful printing requires a stable temperature at the
+    hotend and build plate. This study will investigate the feasibility of a
+    possible feedback control setup for hotend temperature control.
+
+    \section*{Setup}
+    Following is the moderately-detailed flow diagram of control of a 3D
+    printer hotend:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{diagram.png}
+        \caption{The feedback loop that controls a hotend's temperature}
+    \end{figure}
+
+    The feedback loop works as follows:
+    \begin{itemize}
+        \item[1.] The user or the G-Code sets a target temperature for
+        controller.
+        \item[2.] Controller reads the hotend's temperature and calculates the
+        required PWM duty cycle, then applies it to the FET.
+        \item[3.] FET delivers electrical energy to the hotend. This could
+        range from 0 Joules to as many as power supply can withhold. Hotend
+        gains or loses temperature accordingly.
+        \item[4.] Controller reads hotend's temperature again and the loop
+        continues.
+    \end{itemize}
+
+    \section*{Requirement}
+
+    A successful print requires a stable temperature at hotend. A temperature
+    oscillation within the range of $\pm2\degree C$ is acceptable for a stable
+    quality through printing and this is the requirement for this study:
+    Implement a setup where the data acquisition capability allows a
+    temperature control within $\pm2\degree C$ range of setpoint. Also, the
+    budget of the project is 10\texteuro.
+
+    \section*{Approach}
+
+    Firstly, the material properties of hotend and its thermal behavior will be
+    investigated and required control parameters will be determined. Then,
+    controller and FET will be chosen accordingly.
+
+    \section*{Outcome Estimation}
+
+    Given the latest developments in 32-bit controllers and FETs, it is
+    expected that this feasiblity study will return a green light. For example,
+    the latest STM32C0 family MCUs provide 32-bit functionality at 48MHz for
+    as low as 1.6 \$/unit, even they may be an overkill for the project.
+
+\end{document}

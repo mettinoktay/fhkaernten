@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 
 ts = np.linspace(-5, 5, 10)
 pos, field = [], []
-# posC, fieldC = [], []
 
 for x in ts:
     for y in ts:
