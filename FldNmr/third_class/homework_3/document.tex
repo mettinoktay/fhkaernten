@@ -1,0 +1,48 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{nicefrac}
+\pagenumbering{gobble}
+\begin{document}
+    \begin{center}
+        \textbf {FH Kaernten\\
+        \vspace{5mm}
+        Systems Design Master's\\
+        Field Numerics\\
+        Homework 3\\
+        \vspace{5mm}
+        Student: Metin Oktay Yılmaz\\
+        \vspace{5mm}}
+    \end{center}
+
+    \begin{itemize}
+        \item[1.] Transform the position (1,2,3) from Cartesian into
+        cylindrical coordinates.
+        \begin{align}
+            r &= \sqrt{x^2+y^2} = \sqrt{1 + 4} = 2.236 \\
+            \varphi &= atan(\nicefrac{y}{x}) = atan(\nicefrac{2}{1}) =
+            63.434
+            \degree \\
+            z &= z = 3
+        \end{align}
+
+        \item[2.] Transform the vector field $(x^2, y^2, z^2)$ from Cartesian
+        into spherical coordinates.
+        \begin{align}
+        F &= (x^2, y^2, z^2)\\
+        r &= \sqrt{x^4+y^4+z^4}\\
+        \varphi &= atan(\nicefrac{y^2}{x^2})\\
+        \theta &= acos(\nicefrac{z^2}{r})
+    %    T^{K \rightarrow S} &=
+    %        \begin{bmatrix}
+    %            sin\theta cos\varphi & sin\theta sin\varphi & cos\theta \\
+    %            cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta \\
+    %            -sin\varphi & cos\varphi & 0
+    %        \end{bmatrix}
+        \end{align}
+    \end{itemize}
+\end{document}
