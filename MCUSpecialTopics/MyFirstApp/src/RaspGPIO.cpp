@@ -183,7 +183,7 @@ void RaspGPIO::GPIO_AltFuncOutput(unsigned int pin, unsigned int alternate)
 
     //pointer problem 64bit
     *(gpio32 + GPFSEL0 + regOffset) &= ~(7 << shift);
-    *(gpio32 + GPFSEL0 + regOffset) |=  (1 << shift);
+    *(gpio32 + GPFSEL0 + regOffset) |=  (code << shift);
     // TWO LINES ARE NOT CRITICAL BECAUSE DIRECTION SHOULD ONLY BE SET
     // DURING INITIALIZATION; INTERRUPTS ARE ENABLED LATER!
 }

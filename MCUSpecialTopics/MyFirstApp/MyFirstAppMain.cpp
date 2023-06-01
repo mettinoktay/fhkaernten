@@ -123,43 +123,53 @@ MyFirstAppFrame::MyFirstAppFrame(wxFrame *frame, const wxString& title) : wxFram
     /* PWM Configuration */
 
     /* Enable just Channel 1 */
-    *(myRaspPWM->pwm32+PWM_CTL) = *(myRaspPWM->pwm32+PWM_CTL) & 0xFFFFFF00;
+    //*(myRaspPWM->pwm32+PWM_CTL) = *(myRaspPWM->pwm32+PWM_CTL) & 0xFFFFFF00;
 
     /* Enable just Channel 2 */
-    *(myRaspPWM->pwm32+PWM_CTL) = *(myRaspPWM->pwm32+PWM_CTL) & 0xFFFF00FF;
+    //*(myRaspPWM->pwm32+PWM_CTL) = *(myRaspPWM->pwm32+PWM_CTL) & 0xFFFF00FF;
 
     /* Channel both Channels */
     *(myRaspPWM->pwm32+PWM_CTL) = *(myRaspPWM->pwm32+PWM_CTL) & 0xFFFF0000;
     *(myRaspPWM->pwm32+PWM_CTL) &= 0xFFFF0000;
 
-
     /* The following register will have this value:
        01010 1010 xxxx xxxx xxxx xxxx xxxx xxxx */
     *(myRaspCLK->clk32+PWMCLK_CNTL) = 0x5A000000 | 0x20; /* binary: 0010 0000 */
+
+    usleep(20);
 
     /* Explanation of the while condition:
     read-out: xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
            &: 0000 0000 0000 0000 0000 0000 1000 0000 // hex: 0x80
       result: 0000 0000 0000 0000 0000 0000 X000 0000
-
-    Wait while BUSYFlag (Bit 7) is set, then go ahead */
-    while(*(myRaspCLK->clk32+PWMCLK_CNTL) & 0x00000080) {;}
+     */
+    while((*(myRaspCLK->clk32+PWMCLK_CNTL)) & 0x00000080) {
+       /*Wait while BUSYFlag (Bit 7) is set, then go ahead*/
+    }
 
     // Divisor
-    *(myRaspPWM->pwm32+PWM_CTL) |= 0x5A000000 | (0x1FF << 12);
+    *(myRaspCLK->clk32 + PWMCLK_DIV) = 0x5A000000 | (0x1FF << 12);
 
-    // Control Module
-    *(myRaspPWM->pwm32+PWM_RNG1) &= 0xFFFF;
-    *(myRaspPWM->pwm32+PWM_RNG2) &= 0xFFFF;
+    // RNG controls period
+    *(myRaspPWM->pwm32+PWM_RNG1) = 50;
+    *(myRaspPWM->pwm32+PWM_RNG2) = 50;
 
-    *(myRaspPWM->pwm32+PWM_DAT1) &= 0xFF;
-    *(myRaspPWM->pwm32+PWM_DAT2) &= 0xFF;
+    // DAT controls the duty cycle
+    *(myRaspPWM->pwm32+PWM_DAT1) = 0xAC800000;
+    *(myRaspPWM->pwm32+PWM_DAT2) = 0x7FFF;
 
     myRaspGPIO->GPIO_AltFuncOutput(12, 0); /*We have to change it to ALT0*/
     myRaspGPIO->GPIO_AltFuncOutput(13, 0); /*We have to change it to ALT0*/
 
-    *(myRaspCLK->clk32 + PWMCLK_CNTL) |= 0x5A000000 | 0x11;
-    *(myRaspPWM->pwm32 + PWM_CTL) |= 0x00008181;
+    *(myRaspCLK->clk32 + PWMCLK_CNTL) = 0x5A000000 | 0x11;
+
+    /* Set bit 4 for polarity change of channel 1*/
+    // *(myRaspPWM->pwm32 + PWM_CTL) |= 0x10;
+
+    *(myRaspPWM->pwm32 + PWM_CTL) |= 0x2;
+
+    //*(myRaspPWM->pwm32 + PWM_CTL) |= 0x8181;
+    *(myRaspPWM->pwm32 + PWM_CTL) |= 0x0101;
 }
 
 MyFirstAppFrame::~MyFirstAppFrame(){
@@ -167,17 +177,19 @@ MyFirstAppFrame::~MyFirstAppFrame(){
     myRaspPWM->~RaspPWM();
     myRaspCLK->~RaspCLK();
     myRaspGPIO->~RaspGPIO();
+    /*6 Mayıs Cumartesi*/
+    myRaspPWM->~RaspPWM();
 }
 
-void MyFirstAppFrame::OnClose(wxCloseEvent &event){
+void MyFirstAppFrame::OnClose(wxCloseEvent &event) {
     Destroy();
 }
 
-void MyFirstAppFrame::OnQuit(wxCommandEvent &event){
+void MyFirstAppFrame::OnQuit(wxCommandEvent &event) {
     Destroy();
 }
 
-void MyFirstAppFrame::OnAbout(wxCommandEvent &event){
+void MyFirstAppFrame::OnAbout(wxCommandEvent &event) {
 
 
     wxString msg = wxbuildinfo(long_f);
@@ -237,8 +249,9 @@ void MyFirstAppFrame::Button1(wxCommandEvent& event){
     toggle = !toggle;
 }
 
-
 void MyFirstAppFrame::Slider0(wxScrollEvent& event){
     myTimer_ms = mySlider->GetValue();
-    wxMyTimer0->Start(myTimer_ms);
+    //wxMyTimer0->Start(myTimer_ms);
+    *(myRaspPWM->pwm32+PWM_DAT1) = myTimer_ms;
+    *(myRaspPWM->pwm32+PWM_DAT2) = myTimer_ms;
 }
