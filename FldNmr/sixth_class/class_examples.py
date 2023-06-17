@@ -38,10 +38,6 @@ def integration_1d(f, a, b, N):
     return result * delta_x
 
 
-print(integration_1d(f1, 0, 1, 100))
-print(integration_1d(f2, 0, 1, 100))
-
-
 def integration_2d(f, a, b, c, d, N1, N2):
     xs = np.linspace(a, b, N1)
     delta_x = (b - a) / N1
@@ -56,9 +52,6 @@ def integration_2d(f, a, b, c, d, N1, N2):
             result += f(x, y)
 
     return result * delta_x * delta_y
-
-
-print(integration_2d(f3, 0, 1, 0, 1, 100, 100))
 
 
 def integration_3d(fn, a, b, c, d, e, f, N1, N2, N3):
@@ -79,7 +72,4 @@ def integration_3d(fn, a, b, c, d, e, f, N1, N2, N3):
                 result += fn(x, y, z)
 
     return result * delta_x * delta_y * delta_z
-
-
-print(integration_3d(f4, 0, 1, 0, 2, 0, 3, 100, 100, 100))
 
