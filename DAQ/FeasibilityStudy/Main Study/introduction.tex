@@ -13,6 +13,30 @@ cases for 3D printers. For example, Mayorship of Istanbul has built its own
 local service buildings within a week with a fraction of cost and build
 complexity.
 
+This study will focus on FDM printers in which plastic filaments are
+employed as raw material.
+
+\subsection{Definitions}
+
+\textbf{FDM Printer}: \textit{Fused Deposition Modeling} printers melt
+plastic to fuse them onto each other. Combined with 3 or more axis
+movement, this machine produces useful parts or ornaments out of plastic
+filaments.
+
+\textbf{PTC Thermistor:} A special kind of resistor whose resistance value
+changes depending on its temperature. PTC stands for \textit{positive
+temperature coefficient}, which indicates that the resistance of thermistor
+is proportional to its temperature.
+
+\textbf{Hotend:} It is the component that reaches up to 260 degree Celcius
+to melt the plastic and deposit it. The temperature sensor is placed onto
+this component.
+
+\textbf{Nozzle:} It is a subcomponent of hotend, through which the molten
+plastic meets its final destination.
+
+\subsection{Need For Temperature Sensor}
+
 Hotend temperature must be kept stable as fluctuations in hotend
 temperature would cause quality issues on the product, e.g. uneven surface
 finish and/or material deposition, or nozzle clog. Therefore, the frequency
@@ -21,3 +45,15 @@ the sensor is placed at the carriage, its weight plays an important role in
 position control. However, a PTC thermistor is never of high mass,
 therefore this study will assume that the mass of the carriage will remain
 relatively same.
+
+\subsection{Requirements - Boundary Conditions}
+
+\begin{itemize}
+
+     \item Measurement range: 160 - 270 \degree C
+     \item Size: 2x2x2 mm
+     \item Weight < 2 grams
+     \item Accuracy $\pm$ 1 \degree C
+     \item Power consumption < 2 mW
+\end{itemize}
+
