@@ -1,59 +1,78 @@
-\chapter*{Introduction}
-\addcontentsline{toc}{chapter}{Introduction}
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
 \par
 3D printers have taken over the world over the last decade and
 they have
-found use in industry, as well as in homes. The convenience of producing
-plastic parts at homes gathered attention of many hobbyists and makers. In
-industry, the increasing production speed of 3D printers has made
-them suitable for rapid-prototyping, saving immense amount of time and
+found many use cases in industry, as well as in homes. The convenience of producing parts with variety of materials at the comfort of homes gathered attention of many hobbyists and makers. In
+industry, the increasing market demands and production speed of 3D printers have made
+them suitable for rapid-prototyping; saving immense amount of time and
 money. Civil engineers and architects also found use
 cases for 3D printers. For example, Mayorship of Istanbul has built its own
 3D printed
-local service buildings within a week with a fraction of cost and build
+local service buildings within a week and with a fraction of cost and build
 complexity.
 
-This study will focus on FDM printers in which plastic filaments are
-employed as raw material.
+Most 3D printers are based on the technique called \textit{Fused Deposition Modelling.} Detailed definition will come on the next subsection but for now it suffices to know that this technique is based on laying molten plastic on (initially) a flat surface, then on the part's previously laid layers. Since melting is involved in FDM, high temperatures are of concern. Also, as temperature stability affects part quality, it is of high importance that the temperature is well-monitored. For this purpose, positive temperature coefficient thermistors are employed.
 
-\subsection{Definitions}
+This feasibility study will focus on FDM printers in which plastic filaments are employed as raw materials. The circuitry and calculations will be based on the work of the \textit{Sensor Models} class of Mr Bernd Philipitsch and an open-source Makerbase Gen v1.4 board. Further calculations and values will be fetched from respective datasheets of components.
 
-\textbf{FDM Printer}: \textit{Fused Deposition Modeling} printers melt
-plastic to fuse them onto each other. Combined with 3 or more axis
-movement, this machine produces useful parts or ornaments out of plastic
-filaments.
+\subsection{Definitions of Components}
 
-\textbf{PTC Thermistor:} A special kind of resistor whose resistance value
-changes depending on its temperature. PTC stands for \textit{positive
-temperature coefficient}, which indicates that the resistance of thermistor
-is proportional to its temperature.
+Following are the definitions of all the terms that are related to this study.
 
-\textbf{Hotend:} It is the component that reaches up to 260 degree Celcius
-to melt the plastic and deposit it. The temperature sensor is placed onto
-this component.
+\textbf{FDM Technique}: \textit{Fused Deposition Modeling} technique employs disposing molten plastic on top of newly-frozen-plastic to fuse them together. Combined with 3 or more axial movement, this technique can fabricate engineering parts, ornaments, or figures out of polymer materials.
 
-\textbf{Nozzle:} It is a subcomponent of hotend, through which the molten
-plastic meets its final destination.
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \fbox{\includegraphics[scale=0.3]{pics/3dprintercloseup}}
+        \caption{A close up of an FDM 3D Printer \cite{3dprinting}}
+    \end{minipage}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \fbox{\includegraphics[scale=0.3]{pics/FDM}}
+        \caption{Overview of FDM technique \cite{fdm}}
+    \end{minipage}
+\end{figure}
+
+\textbf{PTC Thermistor:} A special kind of resistor whose resistance value changes depending on its temperature. PTC stands for \textit{positive
+temperature coefficient}, which indicates that the resistance of thermistor is proportional to its temperature. Such sensors are also called \textit{RTD}, which stands for \textit{Resistace Temperature Detectors.}
+
+\textbf{Heater Block:} The aluminum or steel body with a heater element where the plastic is molten and disposed.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \fbox{\includegraphics[scale=0.3]{pics/PTC}}
+        \caption{A PTC1000 sensor embedded in an aluminum skin \cite{pt100}}
+    \end{minipage}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \fbox{\includegraphics[scale=0.3]{pics/heaterblock}}
+        \caption{An aluminum heater block \cite{heaterblock}}
+    \end{minipage}
+\end{figure}
+
+\textbf{Nozzle:} It is a subcomponent of the hotend, through which the molten plastic meets its final destination. It can be made of brass, stainless steel, or titanium. Its orifice
+
+\textbf{Hotend:} This is the roof term for assembled heater block, nozzle, and temperature sensor, along with other components which are not of importance for this study.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \fbox{\includegraphics[scale=0.3]{pics/nozzle}}
+        \caption{A stainless steel nozzle \cite{nozzle}}
+    \end{minipage}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \fbox{\includegraphics[scale=0.3]{pics/hotend}}
+        \caption{A partly assembled hotend \cite{hotend}}
+    \end{minipage}
+\end{figure}
 
 \subsection{Need For Temperature Sensor}
 
-Hotend temperature must be kept stable as fluctuations in hotend
-temperature would cause quality issues on the product, e.g. uneven surface
-finish and/or material deposition, or nozzle clog. Therefore, the frequency
-at which the temperature is measured plays an important role. Also, since
-the sensor is placed at the carriage, its weight plays an important role in
-position control. However, a PTC thermistor is never of high mass,
-therefore this study will assume that the mass of the carriage will remain
-relatively same.
-
-\subsection{Requirements - Boundary Conditions}
-
-\begin{itemize}
-
-     \item Measurement range: 160 - 270 \degree C
-     \item Size: 2x2x2 mm
-     \item Weight < 2 grams
-     \item Accuracy $\pm$ 1 \degree C
-     \item Power consumption < 2 mW
-\end{itemize}
-
+Hotend temperature must be kept stable as fluctuations in hotend temperature would cause quality issues on the product, e.g. uneven surface finish and/or material deposition, or nozzle clog. Therefore, the frequency at which the temperature is measured plays an important role. Also, since the sensor is placed at the carriage, its weight plays an important role in position control. However, a PTC thermistor is never of high mass, therefore this study will assume that the mass of the carriage will remain relatively same.

@@ -1,28 +1,58 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+
+\usepackage{geometry}
+\geometry{
+    margin=1in,
+    includeheadfoot
+}
+
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{makeidx}
+\usepackage{setspace}
+
 \usepackage{graphicx}
+\graphicspath{{pics/}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
 \usepackage{float}
+\usepackage{xcolor}
+\usepackage{soul}
 \usepackage{booktabs}
 \usepackage{indentfirst}
 \usepackage{gensymb}
-\usepackage{biblatex}
-\addbibresource{MyLibrary}
+\usepackage{mwe}
 \setcounter{secnumdepth}{0}
+
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\SRC}{\hl{\textit{Put source here}}}
+
 \title{3D Printer Hotend Temperature Measurement}
 \author{Metin Oktay Yılmaz}
+
 \parskip
 \parindent
 
 \begin{document}
     \include{title.tex}
+
     \tableofcontents
+    \singlespacing
+    \listoffigures
+    \singlespacing
+    \listoftables
+    \singlespacing
+
     \include{introduction.tex}
-    \include{goals.tex}
     \include{requirements.tex}
-    \printbibliography
+    \include{ptc1000.tex}
+    \include{voltagedivider.tex}
+    \include{physical_requirements.tex}
+    \include{electrical_requirements.tex}
+    \bibliographystyle{ieeetr}
+    \bibliography{MyLibrary}
 \end{document}

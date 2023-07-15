@@ -1,6 +1,8 @@
-\contentsline {chapter}{Introduction}{2}{}%
-\contentsline {subsection}{Definitions}{2}{}%
-\contentsline {subsection}{Need For Temperature Sensor}{3}{}%
-\contentsline {subsection}{Requirements - Boundary Conditions}{3}{}%
-\contentsline {chapter}{Goals}{4}{}%
-\contentsline {chapter}{Requirements}{5}{}%
+\contentsline {section}{Introduction}{3}{}%
+\contentsline {subsection}{Definitions of Components}{3}{}%
+\contentsline {subsection}{Need For Temperature Sensor}{5}{}%
+\contentsline {section}{Requirements}{6}{}%
+\contentsline {section}{PTC1000 Sensor Characteristic}{7}{}%
+\contentsline {section}{Voltage Divider}{9}{}%
+\contentsline {section}{Physical Requirements}{10}{}%
+\contentsline {section}{Electrical Requirements}{11}{}%

@@ -1,0 +1,50 @@
+\section*{PTC1000 Sensor Characteristic}
+\addcontentsline{toc}{section}{PTC1000 Sensor Characteristic}
+
+PTC1000 is a ubiquitous sensor with a \textit{fairly} linear behavior across a wide range of temperature. The number \textit{1000} in its name denotes that the resistance of the sensor at 0 \degree C is 1000 \ohm . In the lecture \textit{Sensor Models}, the sensor was scrutinized with the help of Matlab and its characteristics were obtained.
+
+Calculation of resistance as a function of temperature is defined in international standard \textbf{DIN EC 60751} and is as follows \cite{Pt1000} \cite{DIN60751}:
+\begin{equation}
+    R(T) = R_0.(1 + a.T + b.T^2)
+\end{equation}
+where the coefficients are as follows:
+\begin{align}
+    a &= 3.9083.10^{-3}\\
+    b &= -5.775.10^{-7}\\
+    c &= -4.183.10^{-12}\\
+    R_0 &= 1000
+\end{align}
+Then, the characteristic graph can be easily obtained with Matlab:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.45]{pics/tempresgraph}
+    \caption{Chatacteristic graph of the PT1000 sensor}
+\end{figure}
+As it is evident from the graph, the temperature domain response is \textit{fairly} linear, which means that there is no visible nonlinearity, and that data extraction from the sensor will be a rather light work for the MCU. This aspect will save substantial amount of computational resources.
+
+Further, it is possible to extract a scalar for the sensor which rates the increase in resistance to increase in temperature or vice versa. The tangent of the line will yield in this value of interest. Before this calculation, the resistance value for 300 \degree C has to be determined, which is:
+
+\begin{align}
+    R(300) &= R_0.(1 + a.300 + b.300^2)\\
+    R(300) &= 2120.51 \Omega
+\end{align}
+
+Then employ this value:
+
+\begin{equation}
+    \alpha = \frac{2120.51 - 1000}{300 - 0} \frac{\ohm}{\degree C} = 3.735 \:  \frac{\ohm}{\degree C}
+\end{equation}
+
+So, for every 1 \degree C increase on the sensor, its resistance will rise by 3.735 \ohm. Likewise, the scalar for obtaining temperature out of resistance value can be calculated as follows:
+
+\begin{equation}
+    \beta = \frac{1}{\alpha} \frac{\degree C}{\ohm} = 0.2677 \:  \frac{\degree C}{\ohm}
+\end{equation}
+
+This means that every 1 \ohm \: increase in sensor resistance is due to 0.2677 \degree C increase in its temperature.
+
+One thing to note for the PT sensors is that they also function below 0 \degree C. However, it is of no use for the application, therefore it will be skipped \cite{Pt1000}.
+
+Now that we know how the sensor behaves, how do we obtain data from it? There are a few options to connect a thermistor to an MCU. One of which is a Wheatstone Bridge, which Mr Philipitsch covered in Sensor Models lecture; the other is a simple voltage divider, which is what's employed on many boards in the market due to its simplicity and cost-effectiveness \cite{mksboard}. As required, voltage divider architecture will be analyzed.
+
