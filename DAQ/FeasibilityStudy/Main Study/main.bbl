@@ -43,4 +43,10 @@
 ``{{IEC}} 60751:2022 | {{IEC Webstore}}.''
   https://webstore.iec.ch/publication/63753.
 
+\bibitem{atmel}
+``{{START}}.'' https://start.atmel.com/.
+
+\bibitem{arduino}
+``Arduino - {{Home}}.'' https://www.arduino.cc/.
+
 \end{thebibliography}

@@ -1,0 +1,20 @@
+\section*{ATMega328PB Characterisitics}
+\addcontentsline{toc}{section}{ATMega328PB Characterisitics}
+
+Originally made by Italian company Atmel, which later on has been purchased by Microchip Technologies in 2016 \cite{atmel}, Atmega328 line of MCUs came into the scene with the rise of Arduino \cite{arduino}. It is ubiquitous and fairly affordable with a price tag of 3.41 \$ per unit, and fairly well input-output capabilities make it a good candidate for this study.
+
+Following data of MCU's ADC is a direct excerpt from the its datasheet \cite{ATMEGA328PB}:
+
+\begin{enumerate}
+    \item  10-bit Resolution
+    \item  Rounding based schema\footnote{This was determined indirectly. There was no matching word in the datasheet for \textit{"truncat"}; therefore it has been assumed that the ADC is rounding-based.}
+    \item  ±2 LSB Absolute Accuracy
+    \item  Up to 76.9 kSPS (Up to 15 kSPS at Maximum Resolution)
+    \item  Temperature Sensor Input Channel
+    \item  0 - VCC ADC Input Voltage Range
+\end{enumerate}
+
+Suprisingly, there is a temperature sensor built into the MCU and it can be accessed via a single ended temperature sensor channel (page 351) \cite{ATMEGA328PB}. However, this sensor obviously measures chip temperature, not does it allow external sensor connection. Therefore this feature is of no use for the study.
+
+As it is displayed in the list above, \textbf{Requirements 4b and 5b are satisified.}
+

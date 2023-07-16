@@ -1,10 +1,10 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces A close up of an FDM 3D Printer \cite {3dprinting}}}{4}{}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Overview of FDM technique \cite {fdm}}}{4}{}%
-\contentsline {figure}{\numberline {3}{\ignorespaces A PTC1000 sensor embedded in an aluminum skin \cite {pt100}}}{4}{}%
-\contentsline {figure}{\numberline {4}{\ignorespaces An aluminum heater block \cite {heaterblock}}}{4}{}%
-\contentsline {figure}{\numberline {5}{\ignorespaces A stainless steel nozzle \cite {nozzle}}}{5}{}%
-\contentsline {figure}{\numberline {6}{\ignorespaces A partly assembled hotend \cite {hotend}}}{5}{}%
+\contentsline {figure}{\numberline {1}{\ignorespaces \small A close up of an FDM 3D Printer \cite {3dprinting}}}{4}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces \small Overview of FDM technique \cite {fdm}}}{4}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces \small A PTC1000 sensor embedded in an aluminum skin \cite {pt100}}}{4}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces \small An aluminum heater block \cite {heaterblock}}}{4}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces \small A stainless steel nozzle \cite {nozzle}}}{5}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces \small A hotend \cite {hotend}}}{5}{}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Chatacteristic graph of the PT1000 sensor}}{7}{}%
-\contentsline {figure}{\numberline {8}{\ignorespaces PTC1000 connected through a voltage divider\cite {mksboard}}}{9}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces PTC1000 connected through a voltage divider\cite {mksboard}}}{10}{}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Voltage - Resistance graph}}{11}{}%
 \contentsline {figure}{\numberline {10}{\ignorespaces Voltage - Temperature graph}}{12}{}%

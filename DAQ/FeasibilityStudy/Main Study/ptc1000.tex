@@ -24,24 +24,18 @@ Then, the characteristic graph can be easily obtained with Matlab:
 As it is evident from the graph, the temperature domain response is \textit{fairly} linear, which means that there is no visible nonlinearity, and that data extraction from the sensor will be a rather light work for the MCU. This aspect will save substantial amount of computational resources.
 
 Further, it is possible to extract a scalar for the sensor which rates the increase in resistance to increase in temperature or vice versa. The tangent of the line will yield in this value of interest. Before this calculation, the resistance value for 300 \degree C has to be determined, which is:
-
 \begin{align}
     R(300) &= R_0.(1 + a.300 + b.300^2)\\
     R(300) &= 2120.51 \Omega
 \end{align}
-
 Then employ this value:
-
 \begin{equation}
     \alpha = \frac{2120.51 - 1000}{300 - 0} \frac{\ohm}{\degree C} = 3.735 \:  \frac{\ohm}{\degree C}
 \end{equation}
-
 So, for every 1 \degree C increase on the sensor, its resistance will rise by 3.735 \ohm. Likewise, the scalar for obtaining temperature out of resistance value can be calculated as follows:
-
 \begin{equation}
     \beta = \frac{1}{\alpha} \frac{\degree C}{\ohm} = 0.2677 \:  \frac{\degree C}{\ohm}
 \end{equation}
-
 This means that every 1 \ohm \: increase in sensor resistance is due to 0.2677 \degree C increase in its temperature.
 
 One thing to note for the PT sensors is that they also function below 0 \degree C. However, it is of no use for the application, therefore it will be skipped \cite{Pt1000}.

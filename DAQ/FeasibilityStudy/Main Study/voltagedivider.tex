@@ -2,17 +2,13 @@
 \addcontentsline{toc}{section}{Voltage Divider}
 
 A voltage divider can be implemented as follows:
-
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.45]{pics/ptc_mks}
+    \includegraphics[scale=0.4]{pics/ptc_mks}
     \caption{PTC1000 connected through a voltage divider\cite{mksboard}}
 \end{figure}
-
 The above circuit is an example from a board available on the market. \cite{mksboard} The voltage source is chosen depending on the logic level of the MCU, which was 5V. The capacitor \textit{C1} is placed for filtering purposes.
 
 \textit{R1} is the first step in the divider and chosen according to the ADC specifications and market availablity. It is chosen as 4.7$K\Omega$ since this value is the sweet-spot between linearity and output voltage range. What this means is that if a higher resistance value was picked, the sensor response would be more linear at the expense of output range, or vice versa. The ADC on the MCU is 10 bit and it can detect between 0 - 5V. This means that the ADC can detect every 0.0049 volts of change (so-called \textit{LSB} value of the ADC). As we are concerned about a 250 \degree C range, an output range of 1.225 V is the absolute minimum.
 
 \textit{R2} is placed for protecting hardware against short-circuit in case of component failure.
-
-

@@ -1,73 +1,91 @@
-\section*{Electrical Requirements}
-\addcontentsline{toc}{section}{Electrical Requirements}
-Since how the sensor behaves is known, it is now time to calculate the voltage range for the thermistor. The voltage on the sensor can be calculated as follows:
+\section*{Feasibility Study}
+\addcontentsline{toc}{section}{Feasibility Study}
 
+\subsection*{Electrical Requirements}
+\addcontentsline{toc}{subsection}{Elecrtrical Requirements}
+Since how the sensor behaves is known, it is now time to calculate the voltage range for the thermistor. The voltage on the sensor can be calculated as follows:
 \begin{equation}
     V_{thermistor} = 5V * \frac{R_{thermistor}}{R1 + R_{thermistor}}
 \end{equation}
-
 Since $R_{thermistor}$ varies between $1000 - 2120.51 \ohm$, we can calculate the voltage across it with respect to its resistance. Further, we can extend this calculation to show the relation between temperature and voltage across the sensor.
-
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.45]{pics/ptc_res_volt}
+    \includegraphics[scale=0.4]{pics/ptc_res_volt}
     \caption{Voltage - Resistance graph}
 \end{figure}
-
 The lowest voltage across the sensor is:
 \begin{equation}
     5*\frac{1000}{1000+4700}= 0.8772 V
 \end{equation}
-
 and the highest voltage across the sensor is:
 \begin{equation}
     5*\frac{2120.51}{2120.51+4700}= 1.5545 V
 \end{equation}
-
 Both of which are within ADC limits, \textbf{hence Requirement 4b is satisfied.} However, the required resolution of detection of 1 \degree C \textbf{(Requirement 1b) is not satisfied} since it necessitates a larger voltage range across the sensor:
-
 \begin{align}
-    270 - 20 &= 250 \degree C \: \text{(or steps)}\\
-    1.5545 - 0.8772 \: V &= 0.6773 V\\
-    \frac{5}{10^{10}} \: \frac{V}{step} &= 0.0049 \: \frac{V}{step}\\
-    \frac{0.6773}{0.0049} &\approx 138 \: \text{steps}
+    270 - 20 &= 250 \degree C \: \text{(or steps)}\\[3mm]
+    1.5545 - 0.8772 \: V &= 0.6773 V\\[3mm]
+    \frac{5}{10^{10}} \: \frac{V}{step} &= 0.0049 \: \frac{V}{step}\\[3mm]
+    \frac{0.6773}{0.0049} &\approx 138 \: \text{steps}[3mm]
 \end{align}
-
 The requirement was that the setup is able to detect 250 temperature steps; however, the it is only possible to detect 138 steps, \textbf{hence Requirement 4 is not satisfied.} Increasing the ADC resolution to 11 bits would do away with this shortcoming, as LSB would drop 1 fold (to 0.00245), therefore the number of detectable steps would increase 1 fold (to 276 steps). One thing to note is that the ADC will register every 1.8116 \degree C change on sensor. This may mean hardship for temperature controller as hotend temperature needs to be kept stable and a swing of temperature with 1.8116 \degree C in amplitude could render prints useless.
-
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.45]{pics/ptc_temp_volt}
+    \includegraphics[scale=0.4]{pics/ptc_temp_volt}
     \caption{Voltage - Temperature graph}
 \end{figure}
-
 From this point on, it is necessary to figure out a way to obtain temperature value. Following equation is used for determining the temperature - voltage relation. This formula can also be used on software side as well to detect temperature:
-
 \begin{equation}
     \text{Temperature} = \frac{V*4700}{5 - V}
 \end{equation}
-
 What makes this equation possible is the linear relation between temeperature and resistance, which was demostrated in previous section. Now that temperature is written as a function of voltage, next thing to do is to convert voltages into digital values, that is, integers written in binary.
 
 It is known that the ADC turns voltage values between 0-5V into binary integers at certain LSB intervals. 0V corresponds to 0, 1*LSB V equals to 1, 2*LSB V equals to 2, and so forth. So with (17) in mind, it is possible to write the following formula:
-
-\begin{equation}
-    \text{ADC Output} = \frac{V_{thermistor}}{LSB} \rightarrow \text{Temperature} = \frac{\text{ADC Output}*\text{LSB}*4700}{5 - \text{ADC Output}*\text{LSB}}
-\end{equation}
-
+\begin{align}
+    \text{ADC Output} &= \frac{V_{thermistor}}{LSB}\\[3mm]
+    \text{Temperature} &= \frac{\text{ADC Output}*\text{LSB}*4700}{5 - \text{ADC Output}*\text{LSB}}
+\end{align}
 Based on ADC architecture, either \textit{rounding-based} or \textit{truncation-based}, equation (16) is either rounded or truncated. Since requirement 6 states that the ADC is rounding-based, (16) will be rounded up if decimal value is above .5, or floored if the decimal value is below or equal to .5.
 
 The lowest voltage across the sensor was found to be 0.8722V, which equals to:
-
 \begin{equation}
     \frac{0.8722}{0.0049} = 178
 \end{equation}
-
-Then, the corresponding binary integer value for the highest voltage is:
-
+Then, the corresponding integer value for the highest voltage is:
 \begin{equation}
     \frac{0.8722}{0.0049} = \ceil*{317.2449}  = 317
 \end{equation}
+\subsection*{Power Consumption of The Sensor}
 
+Power consumption of the sensor is calculated using the well-known formula:
+\begin{equation}
+    \text{Power} = V * I = \nicefrac{V^2}{R} \: (Watts)
+\end{equation}
+\begin{enumerate}
+    \item For the lowest temperature 20 \degree C, the equivalent series resistance is:
+    \begin{align}
+        4.7K + R(20) &= 4.7K + R_0.(a + a.20 + b.20^2) \\
+        &= 4.7K + 1078 = 5778 \Omega
+    \end{align}
+    Then the power consuption becomes:
+    \begin{align}
+        \frac{25}{5778} \: \nicefrac{V^2}{Amp} = 43 \: mW
+    \end{align}
 
+    \item For the highest temperature on the other hand:
+    \begin{align}
+        4.7K + R(270) &= 4.7K + R_0.(a + a.270 + b.270^2) \\
+        & = 4.7K + 2013 = 6713 \Omega
+    \end{align}
+    Then the power consumption becomes:
+    \begin{align}
+        \frac{25}{6713} \: \nicefrac{V^2}{Amp} = 37 \: mW
+    \end{align}
+\end{enumerate}
+
+The highest consumption is 43 mW and it s 7 mW below the \textbf{Requirement 3b, therefore it is satisfied.}
+
+\subsection*{Physical and Financial Requirements}
+\addcontentsline{toc}{subsection}{Physical Requirements}
+The chosen sensor for measurement \textbf{satisfies all physical requirements 1a, 2a, and 3a.} The cost of the project, with only the two components in mind, is 5.17 \$ at the time of writing this report (\today). If the USD does not plummet within the upcoming week, \textbf{financial requirement will be satified}.
 

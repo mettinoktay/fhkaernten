@@ -1,6 +1,7 @@
 \section*{Requirements}
 \addcontentsline{toc}{section}{Requirements}
-\begin{center}
+
+\begin{table}[!h]\begin{center}
     \begin{tabular}{|c|c|c|}
         \hline
         & Physical Requirements & Elctrical Requirements \\
@@ -11,14 +12,15 @@
         \hline
         2 & Weight < 2 grams & Connection Architecture: Voltage Divider \\
         \hline
-        3 &  Measurement range: 20 - 270 \degree C & Power consumption < 2 mW \\
+        3 &  Measurement range: 20 - 270 \degree C & Power consumption < 50 mW \\
         \hline
         4 &  & ADC: 10 bits resolution, 0 - 5V range, rounding-based \\
         \hline
-        5 &  & ADC: 500 sps
+        5 &  & ADC: 500 sps\\
         \hline
     \end{tabular}
-\end{center}
+    \caption{Requirements in two domains}
+\end{center}\end{table}
 
 Financial requirement: Project budget is 10\$.
 
@@ -27,5 +29,3 @@ Financial requirement: Project budget is 10\$.
     \item MCU: Atmega328p \cite{ATMEGA328PB} $\rightarrow$ Price: 1.57€ $\approx$ 1.76 \$
     \item Sensor: TE connectivity PT1000 \cite{Pt1000}, Price: 3.41 \$
 \end{itemize}
-
-The cost of the project, with only the two components in mind, is 5.17 \$ at the time of writing this report (\today). If the USD does not plummet within the upcoming week, \textbf{financial requirement will be satified}.
