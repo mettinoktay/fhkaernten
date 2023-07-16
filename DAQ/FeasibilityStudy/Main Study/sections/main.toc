@@ -1,0 +1,11 @@
+\contentsline {section}{Introduction}{2}{}%
+\contentsline {subsection}{Definitions of Components}{3}{}%
+\contentsline {subsection}{Need For Temperature Sensor}{4}{}%
+\contentsline {section}{Requirements}{5}{}%
+\contentsline {section}{PTC1000 Sensor Characteristic}{5}{}%
+\contentsline {section}{ATMega328PB Characterisitics}{7}{}%
+\contentsline {section}{Voltage Divider}{8}{}%
+\contentsline {section}{Feasibility Study}{9}{}%
+\contentsline {subsection}{Elecrtrical Requirements}{9}{}%
+\contentsline {subsection}{Physical Requirements}{13}{}%
+\contentsline {section}{Verdict}{13}{}%
