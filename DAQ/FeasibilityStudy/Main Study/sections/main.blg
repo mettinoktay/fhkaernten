@@ -3,9 +3,10 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: ieeetr.bst
 Database file #1: MyLibrary.bib
+Warning--I didn't find a database entry for "TEConnectivityConnectors"
 You've used 12 entries,
             1876 wiz_defined-function locations,
-            518 strings with 5040 characters,
+            520 strings with 5088 characters,
 and the built_in function-call counts, 1236 in all, are:
 = -- 108
 > -- 12
@@ -44,3 +45,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 14
 write$ -- 74
+(There was 1 warning)
