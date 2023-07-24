@@ -1,0 +1,80 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{geometry}
+\geometry{
+    margin=1in,
+    includeheadfoot
+}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{setspace}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.97,0.97,0.97}
+
+\lstdefinestyle{codestyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\sffamily\footnotesize\color{black},
+    stringstyle=\color{codepurple},
+    basicstyle=\sffamily\normalsize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=codestyle}
+
+\usepackage{graphicx}
+\graphicspath{{./pics/}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\usepackage{nicefrac}
+
+\usepackage{textcomp}
+
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage{gensymb}
+\usepackage{mwe}
+\setcounter{secnumdepth}{0}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\SRC}{\hl{\textit{Put source here}}}
+
+\title{}
+\author{Metin Oktay Yılmaz}
+
+\parskip
+\parindent
+
+\begin{document}
+    \input{title.tex}
+    \tableofcontents
+    \newpage
+    \input{q1.tex}
+    \input{q2.tex}
+
+\end{document}
