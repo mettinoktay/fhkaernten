@@ -13,10 +13,10 @@
 \usepackage{listings}
 \usepackage{xcolor}
 
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.97,0.97,0.97}
+\definecolor{codegreen}{rgb}{0, 1, 0}
+\definecolor{codegray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{codepurple}{rgb}{0.58, 0, 0.82}
+\definecolor{backcolour}{rgb}{0.94, 0.99, 0.99}
 
 \lstdefinestyle{codestyle}{
     backgroundcolor=\color{backcolour},
@@ -59,8 +59,6 @@
 \setcounter{secnumdepth}{0}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-\newcommand{\SRC}{\hl{\textit{Put source here}}}
-%\renewcommand\lstlistingname{Code Snippet}
 \renewcommand*{\lstlistingname}{Snippet}
 \renewcommand{\lstlistlistingname}{List of Code Snippets}
 
@@ -68,12 +66,11 @@
 \author{Metin Oktay Yılmaz}
 
 \begin{document}
-    \input{title.tex}
+    \input{./title/title.tex}
     {\tableofcontents\let\clearpage\relax\listoffigures\let\clearpage\relax\lstlistoflistings}
     \newpage
-    \input{q1.tex}
-    \input{q2.tex}
-    \input{q3.tex}
-    \input{q4.tex}
-
+    \input{./answers/q1.tex}
+    \input{./answers/q2.tex}
+    \input{./answers/q3.tex}
+    \input{./answers/q4.tex}
 \end{document}
