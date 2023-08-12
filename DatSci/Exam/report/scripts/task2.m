@@ -20,4 +20,3 @@ for i = N
     xlabel('Sum', 'FontSize', 16, 'Interpreter', 'latex')
     ylabel('Probability', 'FontSize', 16, 'Interpreter','latex')
 end
-
