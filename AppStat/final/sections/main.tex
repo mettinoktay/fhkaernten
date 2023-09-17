@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{geometry}
+\geometry{
+    margin=1in,
+    includeheadfoot
+}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{setspace}
+
+\usepackage{minted}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0, 1, 0}
+\definecolor{codegray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{codepurple}{rgb}{0.58, 0, 0.82}
+\definecolor{backcolour}{rgb}{0.94, 0.99, 0.99}
+\lstdefinestyle{codestyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\sffamily\footnotesize\color{black},
+    stringstyle=\color{codepurple},
+    basicstyle=\sffamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=codestyle}
+
+\usepackage{graphicx}
+\graphicspath{{../pics/}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\usepackage{nicefrac}
+
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage{gensymb}
+\usepackage{mwe}
+\setcounter{secnumdepth}{0}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\SRC}{\hl{\textit{Put source here}}}
+
+\newcommand{\valve}[1]{\textit{\textcolor{blue}{V#1}}}
+\newcommand{\tank}[1]{\textit{\textcolor{magenta}{B#1}}}
+\newcommand{\ON}{\textit{\textcolor{green}{ON\:}}}
+\newcommand{\OFF}{\textit{\textcolor{red}{OFF\:}}}
+
+\parskip
+\parindent
+
+\begin{document}
+   \input{title.tex}
+   \tableofcontents
+	\newpage
+   \input{introduction.tex}
+   \input{task1.tex}
+   \input{task2.tex}
+   \input{task3.tex}
+   \input{task6.tex}
+   \input{appendix.tex}
+\end{document}
+

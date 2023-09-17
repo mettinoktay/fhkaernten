@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: ieeetr.bst
+Database file #1: MyLibrary.bib
+Warning--I didn't find a database entry for "TEConnectivityConnectors"
+You've used 12 entries,
+            1876 wiz_defined-function locations,
+            520 strings with 5088 characters,
+and the built_in function-call counts, 1236 in all, are:
+= -- 108
+> -- 12
+< -- 0
++ -- 12
+- -- 0
+* -- 38
+:= -- 121
+add.period$ -- 12
+call.type$ -- 12
+change.case$ -- 12
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 48
+empty$ -- 217
+format.name$ -- 0
+if$ -- 349
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 0
+newline$ -- 39
+num.names$ -- 0
+pop$ -- 72
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 71
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 14
+write$ -- 74
+(There was 1 warning)
