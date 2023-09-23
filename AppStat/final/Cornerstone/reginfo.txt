@@ -1,0 +1,15 @@
+#User information file.
+Username=Systems Engineering
+Company=FH-Kaernten
+SiteID=CS-99999
+InstallationKey=PERMANENT:2E31C223
+CNO_license = 1
+CER_license = 1
+CEL_license = 1
+REG_license = 1
+MAN_license = 1
+PCA_license = 1
+CCM_license = 1
+PCM_license = 1
+DOE_license = 1
+

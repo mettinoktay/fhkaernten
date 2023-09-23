@@ -1,0 +1,248 @@
+#Min factors	Max factors	Runs	Design name	Model	Factor type	Settings vector	Center points	Resolution	Design code	Ref. design	Axial distance	Block size	Block interaction	Block generators	Generators
+2	2	4	Fractional Factorial	Linear	2		0	3	ff 2.2-0-2	fact2		2	Never	1	ab
+3	3	4	Fractional Factorial	Linear	2			3	ff 2.3-1	fact2					ab
+3	3	8	Fractional Factorial	Linear	2		0	3	ff 2.3-0-2	fact3		2	Never	2	ab;ac
+4	4	8	Fractional Factorial	Linear	2		0	3	ff 2.4-1-2	fact3		2	Never	2	ab;bc;abc
+3	3	8	Fractional Factorial	Interactions	2		0	5	ff 2.3-0-4	fact3		4	Cond	1	abc
+4	6	8	Fractional Factorial	Linear	2		0	3	ff 2.6-3-4	fact3		4	Never	1	ab;abc;bc;ac
+4	4	8	Fractional Factorial	Linear	2			4	ff 2.4-1	fact3					abc
+5	7	8	Fractional Factorial	Linear	2			3	ff 2.7-4	fact3					ab;ac;bc;abc
+3	6	8	Plackett-Burman	Linear	2		0	3	pb 8-4	pb8_gen		4	Never	1	
+4	7	8	Plackett-Burman	Linear	2			3	pb 8	pb8_gen					
+2	2	10	Central Composite	Quadratic	0		1		bw 2-5	fact2	1.414214	5	FALSE	0	
+2	2	10	Central Composite Inscribed	Quadratic	0		1		bwi 2-5	fact2	1.414214	5	FALSE	0	
+#2	2	10	Central Composite Faced	Quadratic	0		1		bwf 2-5	fact2	1	5	FALSE	0	
+7	10	12	Plackett-Burman	Linear	2		0	3	pb 12-6	pb12_gen		6	Never	1	
+8	11	12	Plackett-Burman	Linear	2			3	pb 12	pb12_gen					
+2	2	13	Central Composite	Quadratic	0		5		bw 2	fact2	1.414				
+2	2	13	Central Composite Inscribed	Quadratic	0		5		bwi 2	fact2	1.414				
+2	2	13	Central Composite Faced	Quadratic	0		5		bwf 2	fact2	1				
+3	3	15	Box-Behnken	Quadratic	0		3		bb 3	fact2					ab;ac;bc
+3	3	16	Central Composite	Quadratic	0		1		bw 3-9	fact3	1.763834	9	FALSE	0	
+3	3	16	Central Composite Inscribed	Quadratic	0		1		bwi 3-9	fact3	1.763834	9	FALSE	0	
+#3	3	16	Central Composite Faced	Quadratic	0		1		bwf 3-9	fact3	1	9	FALSE	0	
+4	8	16	Fractional Factorial	Linear	2		0	3	ff 2.8-4-2	fact4		2	Never	3	ab;bc;cd;abc;bcd;acd;abd
+4	5	16	Fractional Factorial	Linear	2		0	3	ff 2.5-1-4	fact4		4	Never	2	abc;acd;abcd
+6	12	16	Fractional Factorial	Linear	2		0	3	ff 2.12-8-4	fact4		4	Never	2	abc;acd;abd;bcd;abcd;ab;ac;ad;bc;cd
+4	4	16	Fractional Factorial	Interactions	2		0	5	ff 2.4-0-8	fact4		8	Always	1	abcd
+5	7	16	Fractional Factorial	Linear	2		0	4	ff 2.7-3-8	fact4		8	Always	1	acd;abc;bcd;abd
+8	14	16	Fractional Factorial	Linear	2		0	3	ff 2.14-10-8	fact4		8	Never	1	acd;abc;bcd;abd;abcd;ab;ac;bc;ad;bd;cd
+5	5	16	Fractional Factorial	Interactions	2			5	ff 2.5-1	fact4					abcd
+6	6	16	Fractional Factorial	Linear	2			4	ff 2.6-2	fact4					abc;bcd
+7	7	16	Fractional Factorial	Linear	2			4	ff 2.7-3	fact4					abc;bcd;acd
+8	8	16	Fractional Factorial	Linear	2			4	ff 2.8-4	fact4					bcd;acd;abc;abd
+9	15	16	Fractional Factorial	Linear	2			3	ff 2.15-11	fact4					abc;bcd;acd;abd;abcd;ab;ac;ad;bc;bd;cd
+11	14	16	Plackett-Burman	Linear	2		0	3	pb 16-8	pb16_gen		8	Never	1	
+12	15	16	Plackett-Burman	Linear	2			3	pb 16	pb16_gen					
+3	3	17	Central Composite	Quadratic	0		1		bw 3-7	fact3	1.67332	7	FALSE	1	abc
+3	3	17	Central Composite Inscribed	Quadratic	0		1		bwi 3-7	fact3	1.67332	7	FALSE	1	abc
+#3	3	17	Central Composite Faced	Quadratic	0		1		bwf 3-7	fact3	1	7	FALSE	1	abc
+3	3	20	Central Composite	Quadratic	0		6		bw 3	fact3	1.682				
+3	3	20	Central Composite Inscribed	Quadratic	0		6		bwi 3	fact3	1.682				
+3	3	20	Central Composite Faced	Quadratic	0		6		bwf 3	fact3	1				
+15	18	20	Plackett-Burman	Linear	2		0	3	pb 20-10	pb20_gen		10	Never	1	
+16	19	20	Plackett-Burman	Linear	2			3	pb 20	pb20_gen					
+19	22	24	Plackett-Burman	Linear	2		0	3	pb 24-12	pb24_gen		12	Never	1	
+20	23	24	Plackett-Burman	Linear	2			3	pb 24	pb24_gen					
+4	4	26	Central Composite	Quadratic	0		1		bw 4-17	fact4	2.057893	17	FALSE	0	
+4	4	26	Central Composite Inscribed	Quadratic	0		1		bwi 4-17	fact4	2.057893	17	FALSE	0	
+#4	4	26	Central Composite Faced	Quadratic	0		1		bwf 4-17	fact4	1	17	FALSE	0	
+4	4	27	Box-Behnken	Quadratic	0		1		bb 4-9	fact2		9	FALSE		ab;cd;ad;bc;ac;bd
+4	4	27	Box-Behnken	Quadratic	0		3		bb 4	fact2					ab;cd;ad;bc;ac;bd
+4	4	27	Central Composite	Quadratic	0		1		bw 4-9	fact4	2	9	FALSE	1	abcd
+4	4	27	Central Composite Inscribed	Quadratic	0		1		bwi 4-9	fact4	2	9	FALSE	1	abcd
+#4	4	27	Central Composite Faced	Quadratic	0		1		bwf 4-9	fact4	1	9	FALSE	1	abcd
+5	5	28	Central Composite	Quadratic	0		1		bw 5-17	fact4	2.275186	17	FALSE	0	abcd
+5	5	28	Central Composite Inscribed	Quadratic	0		1		bwi 5-17	fact4	2.275186	17	FALSE	0	abcd
+#5	5	28	Central Composite Faced	Quadratic	0		1		bwf 5-17	fact4	1	17	FALSE	0	abcd
+23	26	28	Plackett-Burman	Linear	2		0	3	pb 28-14	pb28_gen		14	Never	1	
+24	27	28	Plackett-Burman	Linear	2			3	pb 28	pb28_gen					
+4	4	31	Central Composite	Quadratic	0		7		bw 4	fact4	2				
+4	4	31	Central Composite Inscribed	Quadratic	0		7		bwi 4	fact4	2				
+4	4	31	Central Composite Faced	Quadratic	0		7		bwf 4	fact4	1				
+5	5	32	Central Composite	Quadratic	0		6		bw 5-1	ff 2.5-1	2				abcd
+5	5	32	Central Composite Inscribed	Quadratic	0		6		bwi 5-1	ff 2.5-1	2				abcd
+5	5	32	Central Composite Faced	Quadratic	0		6		bwf 5-1	ff 2.5-1	1				abcd
+5	6	32	Fractional Factorial	Linear	2		0	3	ff 2.6-1-2	fact5		2	Never	4	ab;cd;ae;bc;abcde
+7	15	32	Fractional Factorial	Linear	2		0	3	ff 2.15-10-2	fact5		2	Never	4	ab;cd;ae;bc;abc;abd;cde;acd;ade;bde;abe;ace;bcd;bce
+5	6	32	Fractional Factorial	Linear	2		0	3	ff 2.6-1-4	fact5		4	Never	3	abc;cde;acd;abcde
+7	8	32	Fractional Factorial	Linear	2		0	3	ff 2.8-3-4	fact5		4	Never	3	abc;cde;acd;abcd;bcde;abce
+9	9	32	Fractional Factorial	Linear	2		0	3	ff 2.9-4-4	fact5		4	Never	3	abc;cde;acd;bcde;acde;abcd;abce
+10	10	32	Fractional Factorial	Linear	2		0	3	ff 2.10-5-4	fact5		4	Never	3	abc;cde;acd;abcd;abce;bcde;acde;abcde
+11	24	32	Fractional Factorial	Linear	2		0	3	ff 2.24-19-4	fact5		4	Never	3	abc;cde;acd;abd;bcd;abe;ace;ade;bde;bcde;abcd;abce;acde;abcde;ab;cd;bc;be;ac;ad;ce;de
+5	5	32	Fractional Factorial	Interactions	2		0	5	ff 2.5-0-8	fact5		8	Cond	2	abc;ade
+6	6	32	Fractional Factorial	Linear	2		0	4	ff 2.6-1-8	fact5		8	Always	2	abc;ade;abe
+7	7	32	Fractional Factorial	Linear	2		0	4	ff 2.7-2-8	fact5		8	Always	2	abc;ade;ace;abe
+8	9	32	Fractional Factorial	Linear	2		0	3	ff 2.9-4-8	fact5		8	Never	2	abc;ade;abcd;abde;acde;abce
+10	28	32	Fractional Factorial	Linear	2		0	3	ff 2.28-23-8	fact5		8	Never	2	abc;ade;bcd;cde;acd;bde;ace;bce;abd;abe;abcd;abde;acde;abce;ab;ac;ad;ae;bc;bd;be;cd;ce;de;abcde
+5	5	32	Fractional Factorial	Interactions	2		0	6	ff 2.5-0-16	fact5		16	Always	1	abcde
+6	6	32	Fractional Factorial	Interactions	2		0	5	ff 2.6-1-16	fact5		16	Cond	1	abde;abcd
+7	7	32	Fractional Factorial	Linear	2		0	4	ff 2.7-2-16	fact5		16	Always	1	abde;abcd;bcde
+8	9	32	Fractional Factorial	Linear	2		0	4	ff 2.9-4-16	fact5		16	Always	1	abde;bcde;acde;abce;abcd
+10	15	32	Fractional Factorial	Linear	2		0	4	ff 2.15-10-16	fact5		16	Always	1	abcde;abc;bcd;cde;acd;ade;bde;abd;abe;ace;bce
+16	30	32	Fractional Factorial	Linear	2		0	3	ff 2.30-25-16	fact5		16	Never	1	abde;abc;bcd;cde;acd;ade;bde;abd;abe;ace;bce;abcd;abce;acde;bcde;ab;ac;ad;ae;bc;bd;be;cd;ce;de;abcde
+6	6	32	Fractional Factorial	Interactions	2			6	ff 2.6-1	fact5					abcde
+7	7	32	Fractional Factorial	Linear	2			4	ff 2.7-2	fact5					abcd;abde
+8	8	32	Fractional Factorial	Linear	2			4	ff 2.8-3	fact5					abc;abd;bcde
+9	9	32	Fractional Factorial	Linear	2			4	ff 2.9-4	fact5					bcde;acde;abde;abce
+10	10	32	Fractional Factorial	Linear	2			4	ff 2.10-5	fact5					abcd;abce;abde;acde;bcde
+11	16	32	Fractional Factorial	Linear	2			4	ff 2.16-11	fact5					abc;bcd;cde;acd;ade;bde;abd;abe;ace;bce;abcde
+17	31	32	Fractional Factorial	Linear	2			3	ff 2.31-26	fact5					abc;bcd;cde;acd;ade;bde;abd;abe;ace;bce;abcde;abcd;abce;abde;acde;bcde;ab;ac;ad;ae;bc;bd;be;cd;ce;de
+27	30	32	Plackett-Burman	Linear	2		0	3	pb 32-16	pb32_gen		16	Never	1	
+28	31	32	Plackett-Burman	Linear	2			3	pb 32	pb32_gen					
+31	34	36	Plackett-Burman	Linear	2		0	3	pb 36-18	pb36_gen		18	Never	1	
+32	35	36	Plackett-Burman	Linear	2			3	pb 36	pb36_gen					
+36	39	40	Plackett-Burman	Linear	2			3	pb 40	pb40_gen					
+5	5	44	Central Composite	Quadratic			1		bw 5-33	fact5	2.309401	33	FALSE	0	
+5	5	44	Central Composite Inscribed	Quadratic			1		bwi 5-33	fact5	2.309401	33	FALSE	0	
+#5	5	44	Central Composite Faced	Quadratic			1		bwf 5-33	fact5	1	33	FALSE	0	
+39	42	44	Plackett-Burman	Linear	2		0	3	pb 44-22	pb44_gen		22	Never	1	
+40	43	44	Plackett-Burman	Linear	2			3	pb 44	pb44_gen					
+5	5	46	Box-Behnken	Quadratic	0		3		bb 5-23	fact2		23	FALSE		ab;cd;be;ac;de;bc;ad;ce;ae;bd
+5	5	46	Box-Behnken	Quadratic	0		6		bb 5	fact2					ab;cd;be;ac;de;bc;ad;ce;ae;bd
+6	6	46	Central Composite	Quadratic	0		1		bw 6-33	fact5	2.510584	33	FALSE	0	abcde
+6	6	46	Central Composite Inscribed	Quadratic	0		1		bwi 6-33	fact5	2.510584	33	FALSE	0	abcde
+#6	6	46	Central Composite Faced	Quadratic	0		1		bwf 6-33	fact5	1	33	FALSE	0	abcde
+5	5	47	Central Composite	Quadratic	0		1		bw 5-11	fact5	2.211083	11	FALSE	2	abc;bcde
+5	5	47	Central Composite Inscribed	Quadratic	0		1		bwi 5-11	fact5	2.211083	11	FALSE	2	abc;bcde
+#5	5	47	Central Composite Faced	Quadratic	0		1		bwf 5-11	fact5	1	11	FALSE	2	abc;bcde
+6	6	47	Central Composite	Quadratic	0		1		bw 6-17	fact5	2.473388	17	FALSE	1	abc;abcde
+6	6	47	Central Composite Inscribed	Quadratic	0		1		bwi 6-17	fact5	2.473388	17	FALSE	1	abc;abcde
+#6	6	47	Central Composite Faced	Quadratic	0		1		bwf 6-17	fact5	1	17	FALSE	1	abc;abcde
+43	46	48	Plackett-Burman	Linear	2		0	3	pb 48-24	pb48_gen		24	Never	1	
+44	47	48	Plackett-Burman	Linear	2			3	pb 48	pb48_gen					
+5	5	52	Central Composite	Quadratic	0		10		bw 5	fact5	2.378				
+5	5	52	Central Composite Inscribed	Quadratic	0		10		bwi 5	fact5	2.378				
+5	5	52	Central Composite Faced	Quadratic	0		10		bwf 5	fact5	1				
+6	6	53	Central Composite	Quadratic	0		9		bw 6-1	ff 2.6-1	2.378				abcde
+6	6	53	Central Composite Inscribed	Quadratic	0		9		bwi 6-1	ff 2.6-1	2.378				abcde
+6	6	53	Central Composite Faced	Quadratic	0		9		bwf 6-1	ff 2.6-1	1				abcde
+6	6	54	Box-Behnken	Quadratic	0		3		bb 6-27	fact3		27	FALSE	-/+	abd;bce;cdf;ade;bef;acf
+6	6	54	Box-Behnken	Quadratic	0		6		bb 6	fact3					abd;bce;cdf;ade;bef;acf
+7	7	62	Box-Behnken	Quadratic	0		3		bb 7-31	fact3		31	FALSE	-/+	def;afg;beg;abd;cdg;ace;bcf
+7	7	62	Box-Behnken	Quadratic	0		6		bb 7	fact3					def;afg;beg;abd;cdg;ace;bcf
+6	30	64	Fractional Factorial	Linear	2		0	3	ff 2.30-24-2	fact6		2	Never	5	ab;bc;cd;de;ef;abcde;abcdf;abcef;bcdef;abdef;acdef;abc;abd;abe;abf;acd;ace;acf;ade;adf;aef;bcd;bce;bcf;bde;bdf;bef;cde;cdf
+6	7	64	Fractional Factorial	Linear	2		0	3	ff 2.7-1-4	fact6		4	Never	4	abc;bcd;cde;def;abcde
+8	8	64	Fractional Factorial	Linear	2		0	3	ff 2.8-2-4	fact6		4	Never	4	abc;bcd;cde;def;abcd;abef
+9	9	64	Fractional Factorial	Linear	2		0	3	ff 2.9-3-4	fact6		4	Never	4	abc;bcd;cde;def;abcd;acef;cdef
+10	10	64	Fractional Factorial	Linear	2		0	3	ff 2.10-4-4	fact6		4	Never	4	abc;bcd;cde;def;bcdf;acef;abdf;abce
+11	30	64	Fractional Factorial	Linear	2		0	3	ff 2.30-24-4	fact6		4	Never	4	abc;bcd;cde;def;cdf;abcd;abe;bdef;adef;abdf;bcdf;abcf;acde;acef;abef;bcde;cdef;abce;abd;acd;acf;ade;adf;bce;bde;bef;cef;bcf
+6	7	64	Fractional Factorial	Interactions	2		0	5	ff 2.7-1-8	fact6		8	Cond	3	bdf;abef;abcd;abcdef
+8	10	64	Fractional Factorial	Linear	2		0	3	ff 2.10-4-8	fact6		8	Never	3	bdf;abef;abcd;acef;bdef;abde;abcdef
+11	11	64	Fractional Factorial	Linear	2		0	3	ff 2.11-5-8	fact6		8	Never	3	bdf;abef;abcd;cde;abce;abf;bdef;adef
+12	30	64	Fractional Factorial	Linear	2		0	3	ff 2.30-24-8	fact6		8	Never	3	bdf;abef;abcd;abcde;abcdf;abcef;abdef;acdef;bcdef;abc;abd;abe;abf;acd;ace;abde;abcdef;adf;aef;bcd;abce;bcf;bde;abcf;bef;cde;cdf
+6	6	64	Fractional Factorial	Interactions	2		0	5	ff 2.6-0-16	fact6		16	Always	2	abef;abcd
+7	7	64	Fractional Factorial	Interactions	2		0	5	ff 2.7-1-16	fact6		16	Cond	2	abef;abcd;abcdef
+8	8	64	Fractional Factorial	Interactions	2		0	5	ff 2.8-2-16	fact6		16	Cond	2	abef;abcd;acef;abdf
+9	11	64	Fractional Factorial	Linear	2		0	4	ff 2.11-5-16	fact6		16	Always	2	abef;abcd;bcdf;acdf;abde;abce;abcdef
+12	30	64	Fractional Factorial	Linear	2		0	3	ff 2.30-24-16	fact6		16	Never	2	abef;abcd;abcde;abcdf;abcef;abdef;acdef;bcdef;abc;abd;abe;abf;acd;ace;acf;ade;adf;aef;bcd;bce;bcf;bde;bdf;bef;cde;cdf
+6	6	64	Fractional Factorial	Interactions	2		0	7	ff 2.6-0-32	fact6		32	Always	1	abcdef
+7	7	64	Fractional Factorial	Interactions	2		0	5	ff 2.7-1-32	fact6		32	Always	1	abef;abcd
+8	8	64	Fractional Factorial	Interactions	2		0	5	ff 2.8-2-32	fact6		32	Cond	1	abef;abcd;acef
+9	9	64	Fractional Factorial	Linear	2		0	4	ff 2.9-3-32	fact6		32	Always	1	abef;acef;bdef;abde
+10	11	64	Fractional Factorial	Linear	2		0	4	ff 2.11-5-32	fact6		32	Always	1	abef;bcdf;acdf;abde;abce;abcd
+12	12	64	Fractional Factorial	Linear	2		0	4	ff 2.12-6-32	fact6		32	Always	1	abef;bcdf;abcf;abde;abce;abcd;bcde
+13	14	64	Fractional Factorial	Linear	2		0	4	ff 2.14-8-32	fact6		32	Always	1	abef;bcdf;abcf;abde;abce;abcd;bcef;bdef;bcde
+15	30	64	Fractional Factorial	Linear	2		0	3	ff 2.30-24-32	fact6		32	Never	1	abef;abcde;abcdf;abcef;abdef;acdef;bcdef;abc;abd;abe;abf;acd;ace;acf;ade;adf;aef;bcd;bce;bcf;bde;bdf;bef;cde;cdf
+7	7	64	Fractional Factorial	Interactions	2			7	ff 2.7-1	fact6					abcdef
+8	8	64	Fractional Factorial	Interactions	2			5	ff 2.8-2	fact6					abcd;abef
+9	9	64	Fractional Factorial	Linear	2			4	ff 2.9-3	fact6					abcd;acef;cdef
+10	10	64	Fractional Factorial	Linear	2			4	ff 2.10-4	fact6					bcdf;acdf;abde;abce
+11	11	64	Fractional Factorial	Linear	2			4	ff 2.11-5	fact6					cde;abcd;abf;bdef;adef
+12	32	64	Fractional Factorial	Linear	2			4	ff 2.63-57	fact6					abcde;abcdf;abcef;abdef;acdef;bcdef;abc;abd;abe;abf;acd;ace;acf;ade;adf;aef;bcd;bce;bcf;bde;bdf;bef;cde;cdf;cef;def
+6	6	78	Central Composite	Quadratic	0		1		bw 6-65	fact6	2.529822	65	FALSE	0	
+6	6	78	Central Composite Inscribed	Quadratic	0		1		bwi 6-65	fact6	2.529822	65	FALSE	0	
+#6	6	78	Central Composite Faced	Quadratic	0		1		bwf 6-65	fact6	1	65	FALSE	0	
+7	7	80	Central Composite	Quadratic	0		1		bw 7-65	fact6	2.717465	65	FALSE	0	abcdef
+7	7	80	Central Composite Inscribed	Quadratic	0		1		bwi 7-65	fact6	2.717465	65	FALSE	0	abcdef
+#7	7	80	Central Composite Faced	Quadratic	0		1		bwf 7-65	fact6	1	65	FALSE	0	abcdef
+7	7	81	Central Composite	Quadratic	0		1		bw 7-33	fact6	2.696799	33	FALSE	1	abef;abcdef
+7	7	81	Central Composite Inscribed	Quadratic	0		1		bwi 7-33	fact6	2.696799	33	FALSE	1	abef;abcdef
+#7	7	81	Central Composite Faced	Quadratic	0		1		bwf 7-33	fact6	1	33	FALSE	1	abef;abcdef
+8	8	82	Central Composite	Quadratic	0		1		bw 8-65	fact6	2.892962	65	FALSE	0	abcd;abef
+8	8	82	Central Composite Inscribed	Quadratic	0		1		bwi 8-65	fact6	2.892962	65	FALSE	0	abcd;abef
+#8	8	82	Central Composite Faced	Quadratic	0		1		bwf 8-65	fact6	1	65	FALSE	0	abcd;abef
+7	7	83	Central Composite	Quadratic	0		1		bw 7-17	fact6	2.656845	17	FALSE	2	abef;abcd;abcdef
+7	7	83	Central Composite Inscribed	Quadratic	0		1		bwi 7-17	fact6	2.656845	17	FALSE	2	abef;abcd;abcdef
+#7	7	83	Central Composite Faced	Quadratic	0		1		bwf 7-17	fact6	1	17	FALSE	2	abef;abcd;abcdef
+8	8	83	Central Composite	Quadratic	0		1		bw 8-33	fact6	2.870962	33	FALSE	1	ace;abcd;abef
+8	8	83	Central Composite Inscribed	Quadratic	0		1		bwi 8-33	fact6	2.870962	33	FALSE	1	ace;abcd;abef
+#8	8	83	Central Composite Faced	Quadratic	0		1		bwf 8-33	fact6	1	33	FALSE	1	ace;abcd;abef
+8	8	85	Central Composite	Quadratic	0		1		bw 8-17	fact6	2.828427	17	FALSE	2	ace;abcdef;abcd;abef
+8	8	85	Central Composite Inscribed	Quadratic	0		1		bwi 8-17	fact6	2.828427	17	FALSE	2	ace;abcdef;abcd;abef
+#8	8	85	Central Composite Faced	Quadratic	0		1		bwf 8-17	fact6	1	17	FALSE	2	ace;abcdef;abcd;abef
+7	7	87	Central Composite	Quadratic	0		1		bw 7-15	fact6	2.581989	15	FALSE	3	abcd;abef;bdf;abcdef
+7	7	87	Central Composite Inscribed	Quadratic	0		1		bwi 7-15	fact6	2.581989	15	FALSE	3	abcd;abef;bdf;abcdef
+#7	7	87	Central Composite Faced	Quadratic	0		1		bwf 7-15	fact6	1	15	FALSE	3	abcd;abef;bdf;abcdef
+6	6	91	Central Composite	Quadratic	0		15		bw 6	fact6	2.828				
+6	6	91	Central Composite Inscribed	Quadratic	0		15		bwi 6	fact6	2.828				
+6	6	91	Central Composite Faced	Quadratic	0		15		bwf 6	fact6	1				
+7	7	92	Central Composite	Quadratic	0		14		bw 7-1	ff 2.7-1	2.828				abcdef
+7	7	92	Central Composite Inscribed	Quadratic	0		14		bwi 7-1	ff 2.7-1	2.828				abcdef
+7	7	92	Central Composite Faced	Quadratic	0		14		bwf 7-1	ff 2.7-1	1				abcdef
+8	8	93	Central Composite	Quadratic	0		13		bw 8-2	ff 2.8-2	2.828				abcd;abef
+8	8	93	Central Composite Inscribed	Quadratic	0		13		bwi 8-2	ff 2.8-2	2.828				abcd;abef
+8	8	93	Central Composite Faced	Quadratic	0		13		bwf 8-2	ff 2.8-2	1				abcd;abef
+7	9	128	Fractional Factorial	Linear	2		0	3	ff 2.9-2-4	fact7		4	Never	5	abc;bcd;cde;def;efg;acdfg;bcefg
+10	11	128	Fractional Factorial	Linear	2		0	3	ff 2.11-4-4	fact7		4	Never	5	abc;bcd;cde;def;efg;abcg;bcde;acdg;acdfg
+7	7	128	Fractional Factorial	Linear	2		0	4	ff 2.7-0-8	fact7		8	Always	4	abcd;efg;cde;adg
+8	11	128	Fractional Factorial	Linear	2		0	3	ff 2.11-4-8	fact7		8	Never	4	abc;efg;cde;adg;abcd;bcde;acdg;cefg
+7	7	128	Fractional Factorial	Interactions	2		0	5	ff 2.7-0-16	fact7		16	Always	3	abce;bcdf;cefg
+8	11	128	Fractional Factorial	Interactions	2		0	5	ff 2.11-4-16	fact7		16	Cond	3	abce;bcdf;cefg;abcg;bcde;acdf;abcdefg
+7	7	128	Fractional Factorial	Interactions	2		0	6	ff 2.7-0-32	fact7		32	Always	2	abcfg;cdefg
+8	8	128	Fractional Factorial	Interactions	2		0	5	ff 2.8-1-32	fact7		32	Always	2	abce;bcdf;abcdefg
+9	9	128	Fractional Factorial	Interactions	2		0	5	ff 2.9-2-32	fact7		32	Always	2	abce;bcdf;acdfg;bcefg
+10	10	128	Fractional Factorial	Interactions	2		0	5	ff 2.10-3-32	fact7		32	Cond	2	abce;bcdf;abcg;bcde;abcdefg
+11	11	128	Fractional Factorial	Interactions	2		0	5	ff 2.11-4-32	fact7		32	Cond	2	abce;bcdf;abcg;bcde;acdf;abcdefg
+7	7	128	Fractional Factorial	Interactions	2		0	8	ff 2.7-0-64	fact7		64	Always	1	abcdefg
+8	8	128	Fractional Factorial	Interactions	2		0	6	ff 2.8-1-64	fact7		64	Always	1	acdfg;bcefg
+9	9	128	Fractional Factorial	Interactions	2		0	5	ff 2.9-2-64	fact7		64	Always	1	acdf;abcg;bcde
+10	10	128	Fractional Factorial	Interactions	2		0	5	ff 2.10-3-64	fact7		64	Always	1	bcdf;acdfg;bcefg;abce
+11	11	128	Fractional Factorial	Interactions	2		0	5	ff 2.11-4-64	fact7		64	Cond	1	abce;abcg;bcde;acdf;abcdefg
+8	8	128	Fractional Factorial	Interactions	2			8	ff 2.8-1	fact7					abcdefg
+9	9	128	Fractional Factorial	Interactions	2			6	ff 2.9-2	fact7					acdfg;bcefg
+10	10	128	Fractional Factorial	Interactions	2			5	ff 2.10-3	fact7					abcg;bcde;acdf
+11	11	128	Fractional Factorial	Interactions	2			5	ff 2.11-4	fact7					abcg;bcde;acdf;abcdefg
+9	9	130	Box-Behnken	Quadratic	0		1		bb 9-13	fact3		13	FALSE	-/+	adg;beh;cfi;abc;def;ghi;aei;cdh;bfg;afh;bdi;ceg;adg;beh;cfi
+9	9	130	Box-Behnken	Quadratic	0		2		bb 9-26	fact3		26	FALSE		adg;beh;cfi;abc;def;ghi;aei;cdh;bfg;afh;bdi;ceg;adg;beh;cfi
+9	9	130	Box-Behnken	Quadratic	0		10		bb 9	fact3					adg;beh;cfi;abc;def;ghi;aei;cdh;bfg;afh;bdi;ceg;adg;beh;cfi
+7	7	144	Central Composite	Quadratic	0		1		bw 7-129	fact7	2.727977	129	FALSE	0	
+7	7	144	Central Composite Inscribed	Quadratic	0		1		bwi 7-129	fact7	2.727977	129	FALSE	0	
+#7	7	144	Central Composite Faced	Quadratic	0		1		bwf 7-129	fact7	1	129	FALSE	0	
+8	8	146	Central Composite	Quadratic	0		1		bw 8-129	fact7	2.904154	129	FALSE	0	abcdefg
+8	8	146	Central Composite Inscribed	Quadratic	0		1		bwi 8-129	fact7	2.904154	129	FALSE	0	abcdefg
+#8	8	146	Central Composite Faced	Quadratic	0		1		bwf 8-129	fact7	1	129	FALSE	0	abcdefg
+7	7	163	Central Composite	Quadratic	0		21		bw 7	fact7	3.364				
+7	7	163	Central Composite Inscribed	Quadratic	0		21		bwi 7	fact7	3.364				
+7	7	163	Central Composite Faced	Quadratic	0		21		bwf 7	fact7	1				
+8	8	164	Central Composite	Quadratic	0		20		bw 8-1	ff 2.8-1	3.364				abcdefg
+8	8	164	Central Composite Inscribed	Quadratic	0		20		bwi 8-1	ff 2.8-1	3.364				abcdefg
+8	8	164	Central Composite Faced	Quadratic	0		20		bwf 8-1	ff 2.8-1	1				abcdefg
+10	10	170	Box-Behnken	Quadratic	0		5		bb 10-85	fact4		85	FALSE	-/+	bfgj;abej;bcgh;bdfi;ahij;cdej;adgh;cegi;acfi;defh
+10	10	170	Box-Behnken	Quadratic	0		10		bb 10	fact4					bfgj;abej;bcgh;bdfi;ahij;cdej;adgh;cegi;acfi;defh
+11	11	188	Box-Behnken	Quadratic	0		12		bb 11	ff 2.5-1					cghik;adhij;beijk;acfjk;abdgk;abceh;bcdfi;cdegj;defhk;aefgi;bfghj
+12	12	204	Box-Behnken	Quadratic	0		6		bb 12-102	fact4		102	FALSE	-/+	abeg;bcfh;cdgi;dehj;efik;fgjl;aghk;bhil;acij;bdjk;cekl;adfl
+12	12	204	Box-Behnken	Quadratic	0		12		bb 12	fact4					abeg;bcfh;cdgi;dehj;efik;fgjl;aghk;bhil;acij;bdjk;cekl;adfl	
+8	8	274	Central Composite	Quadratic	0		1		bw 8-257	fact8	2.909798	257	FALSE	0		
+8	8	274	Central Composite Inscribed	Quadratic	0		1		bwi 8-257	fact8	2.909798	257	FALSE	0		
+#8	8	274	Central Composite Faced	Quadratic	0		1		bwf 8-257	fact8	1	257	FALSE	0		
+8	8	300	Central Composite	Quadratic	0		28		bw 8	fact8	4					
+8	8	300	Central Composite Inscribed	Quadratic	0		28		bwi 8	fact8	4					
+8	8	300	Central Composite Faced	Quadratic	0		28		bwf 8	fact8	1					
+1	32	0	Full Factorial	Any	1		0	5	fullfact			0	FALSE	0		
+1	100	0	D-optimal	Any	1		0		d-opt			0	FALSE			
+1	999	0	None	Any	1		0		none							
+3	4	9	Latin Square	Linear	3	;+3 +3 +3 +3			lsqr3							lsqr3.dat
+3	4	9	L9	Linear	3	;+3 +3 +3 +3			l9							l9.dat
+4	8	18	L18(2*3^7)	Linear	3	;+2 +3 +3 +3 +3 +3 +3 +3			l18a							l18a.dat
+4	9	18	L18(2^3*3^6)	Linear	3	;+2 +2 +2 +3 +3 +3 +3 +3 +3			l18b							l18b.dat
+4	12	18	L18(2^8*3^4)	Linear	3	;+2 +2 +2 +2 +2 +2 +2 +2 +3 +3 +3 +3			l18c							l18c.dat
+8	13	27	L27	Linear	3	;+3 +3 +3 +3 +3 +3 +3 +3 +3 +3 +3 +3 +3			l27							l27.dat
+9	16	36	L36(2^3*3^13)	Linear	3	;+2 +2 +2 +3 +3 +3 +3 +3 +3 +3 +3 +3 +3 +3 +3 +3			l36a							l36a.dat
+4	4	12	Irregular Fractional Factorial	Interactions	2	;-2 -2 -2 -2			iff4							iff41.dat
+7	7	40	Irregular Fractional Factorial	Interactions	2	;-2 -2 -2 -2 -2 -2 -2			iff7							iff7.dat
+8	8	48	Irregular Fractional Factorial	Interactions	2	;-2 -2 -2 -2 -2 -2 -2 -2			iff8							iff8.dat
+9	11	96	Irregular Fractional Factorial	Interactions	2	;-2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2			iff11							iff11.dat
+5	5	21	Small Central Composite	Quadratic	0	;0 0 0 0 0			scc5							small.dat
+# The end
+

@@ -1,14 +1,27 @@
 \newpage
 \section{Evaluation of The First Run}
-\begin{figure}[H]
+
+The position of V112 has the most positive effect to the flow rate, averaging around 400.000 $\nicefrac{mm^3}{sec}$, followed by the pump voltage, which averages around half the V112. The other two affected flow rate significantly negatively, and they both are rated around -350.000 $\nicefrac{mm^3}{sec}$.
+
+It is intuitive to think that when the V112 is closed, the level of B102 is bound to increase. This opinion is correct when V104 is also OFF. (runs \#1, \#5, \#9, \#13). However, as the incoming pipe is located below the high water level mark, level of B102 becomes the deciding factor of the flow rate:
+
+\begin{itemize}[noitemsep, topsep=0pt]
+\item if it is between 50-70 mm, the flow rate is either 0 or positive (runs \#3, \#7)
+\item else, it is always negative (i.e. tendency is falling). (runs \#11, \#15).
+\end{itemize}
+
+When the V112 is open, the tendecy depends on all the other factors. Explaining every case is time-consuming and uninteresting, therefore it will be omitted.
+
+Following two graphs demonstrate the outcome of the first run:
+
+\begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.2]{effect_pareto}
 	\end{center}
-	\caption{Effects Pareto obtained}
+	\caption{Effects Pareto}
 \end{figure}
 
-
-\begin{figure}[H]
+\begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.2]{effect_probability_plot}
 	\end{center}

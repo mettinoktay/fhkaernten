@@ -1,8 +1,12 @@
 \contentsline {section}{Introduction}{2}{}%
 \contentsline {subsection}{Characteristics of the Setup}{2}{}%
+\contentsline {subsection}{First Run}{3}{}%
+\contentsline {subsection}{Second Run}{3}{}%
 \contentsline {subsection}{Tasks}{4}{}%
 \contentsline {subsection}{Calculation of Flow Rate}{4}{}%
 \contentsline {section}{Evaluation of The First Run}{5}{}%
 \contentsline {section}{Fractional Design}{6}{}%
 \contentsline {section}{Common Evaluation of First and Second Run}{7}{}%
-\contentsline {section}{Comments on The Quality of The Design}{8}{}%
+\contentsline {section}{Manual Estimation of Effects}{8}{}%
+\contentsline {section}{Interpretation of Results}{9}{}%
+\contentsline {section}{Comments on The Quality of The Design}{10}{}%

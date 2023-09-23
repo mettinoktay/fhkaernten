@@ -12,35 +12,7 @@
 \usepackage{amssymb}
 \usepackage{makeidx}
 \usepackage{setspace}
-
-\usepackage{minted}
-
-\usepackage{listings}
-\usepackage{xcolor}
-\definecolor{codegreen}{rgb}{0, 1, 0}
-\definecolor{codegray}{rgb}{0.5, 0.5, 0.5}
-\definecolor{codepurple}{rgb}{0.58, 0, 0.82}
-\definecolor{backcolour}{rgb}{0.94, 0.99, 0.99}
-\lstdefinestyle{codestyle}{
-    backgroundcolor=\color{backcolour},
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{blue},
-    numberstyle=\sffamily\footnotesize\color{black},
-    stringstyle=\color{codepurple},
-    basicstyle=\sffamily\footnotesize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-}
-
-\lstset{style=codestyle}
+%\usepackage{parskip}
 
 \usepackage{graphicx}
 \graphicspath{{../pics/}}
@@ -59,6 +31,9 @@
 \usepackage{mwe}
 \setcounter{secnumdepth}{0}
 
+\usepackage{enumitem}
+\setlist[itemize]{parsep=0pt}
+
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newcommand{\SRC}{\hl{\textit{Put source here}}}
 
@@ -69,16 +44,18 @@
 
 \parskip
 \parindent
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{10pt}
 
 \begin{document}
-   \input{title.tex}
-   \tableofcontents
+   	\input{title.tex}
+   	\tableofcontents
 	\newpage
-   \input{introduction.tex}
-   \input{task1.tex}
-   \input{task2.tex}
-   \input{task3.tex}
-   \input{task6.tex}
-   \input{appendix.tex}
+   	\input{introduction.tex}
+   	\input{task1.tex}
+   	\input{task2.tex}
+   	\input{task3.tex}
+   	\input{task4.tex}
+   	\input{task5.tex}
+   	\input{task6.tex}
 \end{document}
-
