@@ -12,18 +12,36 @@ It is intuitive to think that when the V112 is closed, the level of B102 is boun
 
 When the V112 is open, the tendecy depends on all the other factors. Explaining every case is time-consuming and uninteresting, therefore it will be omitted.
 
-Following two graphs demonstrate the outcome of the first run:
+Following table and two graphs demonstrate the outcome of the first run:
 
-\begin{figure}[h]
+\begin{table}[!h]
+    \begin{center}
+        \begin{tabular}{r|l}
+            effect & estimate\\
+            \cmidrule{1-2}
+            average & -35014 \\
+            \cmidrule{1-1}
+            main effects &  \\
+            \cmidrule{1-1}
+            \valve{112} & 391962 \\
+            \valve{104}& 198057 \\
+            Pump voltage& -365033 \\
+            Level \tank{102}& -365044 \\
+        \end{tabular}
+        \caption{Effects estimate}
+    \end{center}
+\end{table}
+
+\begin{figure}[!h]
 	\begin{center}
-		\includegraphics[scale=0.2]{effect_pareto}
+		\includegraphics[scale=0.4]{effect_pareto}
 	\end{center}
 	\caption{Effects Pareto}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[!h]
 	\begin{center}
-		\includegraphics[scale=0.2]{effect_probability_plot}
+		\includegraphics[scale=0.3]{effect_probability_plot}
 	\end{center}
 	\caption{Effects Probability Plot}
 \end{figure}
