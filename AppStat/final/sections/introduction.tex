@@ -15,97 +15,96 @@ The setup under scrutiny is provided as the following schema:
 \item It consists of 2 tanks \tank{101} and \tank{102}, 2 valves \valve{104} and \valve{112}, and 1 pump.
 \item The tanks are separated vertically, i.e. they have different potential energies. However, valves are placed to the same height.
 \item \valve{112} valve connects two tanks together; while \valve{104} valve connects pump's output directly back to \tank{101} tank.
-\item Valves are on either \ON or \OFF position. Pump motor operates at either 5V or 10V. Lastly, the level of \tank{102} is either 50-70mm or 240-260mm ... 
+\item Valves are on either \ON or \OFF position. Pump motor operates at either 5V or 10V. Lastly, the level of \tank{102} is either 50-70mm or 240-260mm ...
 \item ... therefore, there are 4 predictors in the setup: Each valve's position, pump motor voltage, and the water level of \tank{102}.
 \end{enumerate}
 
 The experiment was run twice to demonstrate reproducability. The results for each run is given in the next page.
 
-\newgeometry{top=3cm,bottom=2cm,left=2cm,right=2cm}
-\subsection{First Run}
+\newgeometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
 \begin{table}[!h]
 \begin{center}
+    \def\arraystretch{1.2}
 \begin{tabular}{||c|c|c|c|c|c|c|c||}
-\hline 
- & \valve{112} & \valve{104} & Pump Voltage & Level \tank{102} & Tendency & Time (s) & Flow Rate ($\nicefrac{mm^3}{s}$) \\ 
-\hline 
-1 & \OFF & \OFF & 5V & 50-70 mm & rising & 19.6 & 218112 \\ 
-\hline 
-2 & \ON & \OFF & 5V & 50-70 mm & no & $\infty$ & 0 \\ 
-\hline 
-3 & \OFF & \ON & 5V & 50-70 mm & no & $\infty$ & 0 \\ 
-\hline 
-4 & \ON & \ON & 5V & 50-70 mm & falling & 20.5 & -208536 \\ 
-\hline 
-5 & \OFF & \OFF & 10V & 50-70 mm & rising & 9.9 & 431818 \\ 
-\hline 
-6 & \ON & \OFF & 10V & 50-70 mm & rising & 21.4 & 199766 \\ 
-\hline 
-7 & \OFF & \ON & 10V & 50-70 mm & rising & 17.2 & 234546 \\ 
-\hline 
-8 & \ON & \ON & 10V & 50-70 mm & no & $\infty$ & 0 \\ 
-\hline 
-9 & \OFF & \OFF & 5V & 240-260 mm & rising & 29.1 & 146907 \\ 
-\hline 
-10 & \ON & \OFF & 5V & 240-260 mm & falling & 11.5 & -371739 \\ 
-\hline 
-11 & \OFF & \ON & 5V & 240-260 mm & falling & 12.6 & -339285 \\ 
-\hline 
-12 & \ON & \ON & 5V & 240-260 mm & falling & 5.2 & -822115 \\ 
-\hline 
-13 & \OFF & \OFF & 10V & 240-260 mm & rising & 10.1 & 423267 \\ 
-\hline 
-14 & \ON & \OFF & 10V & 240-260 mm & falling & 24.8 & -172379 \\ 
-\hline 
-15 & \OFF & \ON & 10V & 240-260 mm & falling & 32.4 & -131944 \\ 
-\hline 
-16 & \ON & \ON & 10V & 240-260 mm & falling & 5.5 & -777272 \\ 
-\hline 
-\end{tabular} 
+\hline
+ & \valve{112} & \valve{104} & Pump Voltage & Level \tank{102} & Tendency & Time (s) & Flow Rate ($\nicefrac{mm^3}{s}$) \\
+\hline
+1 & \OFF & \OFF & 5V & 50-70 mm & rising & 19.6 & 218112 \\
+\hline
+2 & \ON & \OFF & 5V & 50-70 mm & no & $\infty$ & 0 \\
+\hline
+3 & \OFF & \ON & 5V & 50-70 mm & no & $\infty$ & 0 \\
+\hline
+4 & \ON & \ON & 5V & 50-70 mm & falling & 20.5 & -208536 \\
+\hline
+5 & \OFF & \OFF & 10V & 50-70 mm & rising & 9.9 & 431818 \\
+\hline
+6 & \ON & \OFF & 10V & 50-70 mm & rising & 21.4 & 199766 \\
+\hline
+7 & \OFF & \ON & 10V & 50-70 mm & rising & 17.2 & 234546 \\
+\hline
+8 & \ON & \ON & 10V & 50-70 mm & no & $\infty$ & 0 \\
+\hline
+9 & \OFF & \OFF & 5V & 240-260 mm & rising & 29.1 & 146907 \\
+\hline
+10 & \ON & \OFF & 5V & 240-260 mm & falling & 11.5 & -371739 \\
+\hline
+11 & \OFF & \ON & 5V & 240-260 mm & falling & 12.6 & -339285 \\
+\hline
+12 & \ON & \ON & 5V & 240-260 mm & falling & 5.2 & -822115 \\
+\hline
+13 & \OFF & \OFF & 10V & 240-260 mm & rising & 10.1 & 423267 \\
+\hline
+14 & \ON & \OFF & 10V & 240-260 mm & falling & 24.8 & -172379 \\
+\hline
+15 & \OFF & \ON & 10V & 240-260 mm & falling & 32.4 & -131944 \\
+\hline
+16 & \ON & \ON & 10V & 240-260 mm & falling & 5.5 & -777272 \\
+\hline
+\end{tabular}
 \end{center}
 \caption{First Run}
 \end{table}
-
-\subsection{Second Run}
 \begin{table}[!h]
 \begin{center}
+    \def\arraystretch{1.2}
 \begin{tabular}{||c|c|c|c|c|c|c|c||}
-\hline 
- & \valve{112} & \valve{104} & Pump Voltage & Level \tank{102}  & Tendency & Time (s) & Flow Rate ($\nicefrac{mm^3}{s}$) \\ 
-\hline 
-1 & \OFF & \OFF & 5V & 50-70 mm & rising & 19.1 & 223821\\ 
-\hline 
-2 & \ON & \OFF & 5V & 50-70 mm & no & $\infty$ & 0 \\ 
-\hline 
-3 & \OFF & \ON & 5V & 50-70 mm & no & $\infty$ & 0 \\ 
-\hline 
-4 & \ON & \ON & 5V & 50-70 mm & falling & 30.0 & -142500 \\ 
-\hline 
-5 & \OFF & \OFF & 10V & 50-70 mm & rising & 10.3 & 415048\\ 
-\hline 
-6 & \ON & \OFF & 10V & 50-70 mm & rising & 19.6 & 218112 \\ 
-\hline 
-7 & \OFF & \ON & 10V & 50-70 mm & rising & 22.7 & 188325 \\ 
-\hline 
-8 & \ON & \ON & 10V & 50-70 mm & no & $\infty$ & 0 \\ 
-\hline 
-9 & \OFF & \OFF & 5V & 240-260 mm & rising & 25.9 & 165057 \\ 
-\hline 
-10 & \ON & \OFF & 5V & 240-260 mm & falling & 12.3 & -347560 \\ 
-\hline 
-11 & \OFF & \ON & 5V & 240-260 mm & falling & 12.0 & -356250 \\ 
-\hline 
-12 & \ON & \ON & 5V & 240-260 mm & falling & 4.8 & -890625 \\ 
-\hline 
-13 & \OFF & \OFF & 10V & 240-260 mm & rising & 13.0 & 328846 \\ 
-\hline 
-14 & \ON & \OFF & 10V & 240-260 mm & falling & 24.4 & -175204 \\ 
-\hline 
-15 & \OFF & \ON & 10V & 240-260 mm & falling & 29.4 & -145408 \\ 
-\hline 
-16 & \ON & \ON & 10V & 240-260 mm & falling & 5.8 & -737068 \\ 
-\hline 
-\end{tabular} 
+\hline
+ & \valve{112} & \valve{104} & Pump Voltage & Level \tank{102}  & Tendency & Time (s) & Flow Rate ($\nicefrac{mm^3}{s}$) \\
+\hline
+1 & \OFF & \OFF & 5V & 50-70 mm & rising & 19.1 & 223821\\
+\hline
+2 & \ON & \OFF & 5V & 50-70 mm & no & $\infty$ & 0 \\
+\hline
+3 & \OFF & \ON & 5V & 50-70 mm & no & $\infty$ & 0 \\
+\hline
+4 & \ON & \ON & 5V & 50-70 mm & falling & 30.0 & -142500 \\
+\hline
+5 & \OFF & \OFF & 10V & 50-70 mm & rising & 10.3 & 415048\\
+\hline
+6 & \ON & \OFF & 10V & 50-70 mm & rising & 19.6 & 218112 \\
+\hline
+7 & \OFF & \ON & 10V & 50-70 mm & rising & 22.7 & 188325 \\
+\hline
+8 & \ON & \ON & 10V & 50-70 mm & no & $\infty$ & 0 \\
+\hline
+9 & \OFF & \OFF & 5V & 240-260 mm & rising & 25.9 & 165057 \\
+\hline
+10 & \ON & \OFF & 5V & 240-260 mm & falling & 12.3 & -347560 \\
+\hline
+11 & \OFF & \ON & 5V & 240-260 mm & falling & 12.0 & -356250 \\
+\hline
+12 & \ON & \ON & 5V & 240-260 mm & falling & 4.8 & -890625 \\
+\hline
+13 & \OFF & \OFF & 10V & 240-260 mm & rising & 13.0 & 328846 \\
+\hline
+14 & \ON & \OFF & 10V & 240-260 mm & falling & 24.4 & -175204 \\
+\hline
+15 & \OFF & \ON & 10V & 240-260 mm & falling & 29.4 & -145408 \\
+\hline
+16 & \ON & \ON & 10V & 240-260 mm & falling & 5.8 & -737068 \\
+\hline
+\end{tabular}
 \end{center}
 \caption{Second run}
 \end{table}

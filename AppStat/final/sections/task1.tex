@@ -12,36 +12,102 @@ It is intuitive to think that when the V112 is closed, the level of B102 is boun
 
 When the V112 is open, the tendecy depends on all the other factors. Explaining every case is time-consuming and uninteresting, therefore it will be omitted.
 
-Following table and two graphs demonstrate the outcome of the first run:
+Following tables and graphs demonstrate the outcome of the first run:
 
 \begin{table}[!h]
-    \begin{center}
-        \begin{tabular}{r|l}
-            effect & estimate\\
-            \cmidrule{1-2}
-            average & -35014 \\
-            \cmidrule{1-1}
-            main effects &  \\
-            \cmidrule{1-1}
-            \valve{112} & 391962 \\
-            \valve{104}& 198057 \\
-            Pump voltage& -365033 \\
-            Level \tank{102}& -365044 \\
-        \end{tabular}
-        \caption{Effects estimate}
-    \end{center}
+        \begin{minipage}{.5\linewidth}
+            \centering
+            \def\arraystretch{1.5}
+            \begin{tabular}{r|l}
+                effect & estimate\\
+                \cmidrule{1-2}
+                average & -35014 \\
+                \cmidrule{1-1}
+                main effects &  \\
+                \cmidrule{1-1}
+                \valve{112} & 391962 \\
+                \valve{104}& 198057 \\
+                V\textsubscript{pump}& -365033 \\
+                Level \tank{102}& -365044 \\
+                \cmidrule{1-2}
+            \end{tabular}
+            \caption{Effects estimate}
+        \end{minipage}%
+        \begin{minipage}{.5\linewidth}
+            \centering
+            \def\arraystretch{1.5}
+             \begin{tabular}{r|l}
+                Term & Flow Rate \\
+                \cmidrule{1-2}
+                Constant & 0.0687165 \\
+                \valve{112} & 0.000212671 \\
+                \valve{104} & 0.000377635 \\
+                V\textsubscript{pump}& 0.0194116 \\
+                Level \tank{102}& 0.000377729 \\
+                $R^2$& 0.8884 \\
+                $R_{\text{adjusted}}^2$& 0.847846 \\
+                RMS Error & 144843.0267 \\
+                Residual DF & 11 \\
+                \cmidrule{1-2}
+            \end{tabular}
+            \caption{Term significance}
+        \end{minipage}
 \end{table}
 
 \begin{figure}[!h]
 	\begin{center}
-		\includegraphics[scale=0.4]{effect_pareto}
+		\includegraphics[scale=0.36]{effect_pareto}
 	\end{center}
 	\caption{Effects Pareto}
 \end{figure}
 
 \begin{figure}[!h]
+    \vspace{5mm}
 	\begin{center}
 		\includegraphics[scale=0.3]{effect_probability_plot}
 	\end{center}
 	\caption{Effects Probability Plot}
 \end{figure}
+
+\newpage
+\subsection{Two Way Interaction}
+Due to limitations of computer display, the font sizes of the following figure had to be kept small so that the bars become visible. The corresponding values for each bar is as follows:
+
+\begin{center}
+   \tcbox{\rotatebox{90}{\valve{112}}}%
+   \tcbox{\rotatebox{90}{Level \tank{102}*\valve{112}}}%
+   \tcbox{\rotatebox{90}{V\textsubscript{pump}}}%
+   \tcbox{\rotatebox{90}{V\textsubscript{pump}*\valve{112}}}%
+   \tcbox{\rotatebox{90}{\valve{104}*\valve{112}}}%
+   \tcbox{\rotatebox{90}{Level \tank{102}*V\textsubscript{pump}}}%
+   \tcbox{\rotatebox{90}{V\textsubscript{pump}*\valve{104}}}%
+   \tcbox{\rotatebox{90}{Level \tank{102}*\valve{104}}}%
+   \tcbox{\rotatebox{90}{Level \tank{102}}}%
+   \tcbox{\rotatebox{90}{\valve{104}}}
+\end{center}
+
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[scale=0.5]{two_way}
+    \end{center}
+    \caption{Two-Way Interaction Effects Pareto}
+\end{figure}
+
+\begin{table}[!h]
+    \begin{center}
+        \def\arraystretch{1.5}
+        \begin{tabular}{r|l}
+            \cmidrule{1-2}
+            Interaction & Yield \\
+            \cmidrule{1-2}
+            \tank\{B102\}*\valve\{112\} & 337301 \\
+            V\textsubscript\{pump\}*\valve\{112\} & 198057 \\
+            \valve\{104\}*\valve\{112\} & 1696 \\
+            \tank\{102\}*V\textsubscript\{pump\} & -16081 \\
+            V\textsubscript{pump}*\valve{104} & -24240 \\
+            \tank{102}*\valve{104} & -159123 \\
+            \cmidrule{1-2}
+        \end{tabular}
+        \caption{Interaction estimate}
+    \end{center}
+\end{table}

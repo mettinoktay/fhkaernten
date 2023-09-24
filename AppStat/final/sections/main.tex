@@ -4,7 +4,9 @@
 
 \usepackage{geometry}
 \geometry{
-    margin=1in,
+    top=2.2cm,
+    bottom=2.2cm,
+    margin=2.2cm,
     includeheadfoot
 }
 
@@ -29,6 +31,18 @@
 \usepackage{gensymb}
 \usepackage{mwe}
 \setcounter{secnumdepth}{0}
+
+\usepackage{tcolorbox}
+\tcbset{nobeforeafter, height=4cm}
+%\newtcolorbox{mytextbox}[1][]{%
+%    fit algorithm=hybrid*,
+%    sharp corners,
+%    enhanced,
+%    sidebyside,
+%    colback=white,
+%    height=15mm,
+%    width=15mm,#1
+%}
 
 \usepackage{enumitem}
 \setlist[itemize]{parsep=0pt}
