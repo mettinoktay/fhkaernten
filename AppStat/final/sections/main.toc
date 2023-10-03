@@ -6,6 +6,5 @@
 \contentsline {subsection}{Two Way Interaction}{6}{}%
 \contentsline {section}{Fractional Design}{7}{}%
 \contentsline {section}{Common Evaluation of First and Second Run}{8}{}%
-\contentsline {section}{Manual Estimation of Effects}{9}{}%
-\contentsline {section}{Interpretation of Results}{10}{}%
-\contentsline {section}{Comments on The Quality of The Design}{11}{}%
+\contentsline {section}{Interpretation of Results}{9}{}%
+\contentsline {section}{Comments on The Quality of The Design}{10}{}%

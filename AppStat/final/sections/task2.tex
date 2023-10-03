@@ -3,15 +3,32 @@
 
 On the lecture notes, the best recipe for fractional design (which is \textit{reduction by factor of 2}) is given as the following:
 \begin{enumerate}
-\item Write down a full factorial $2^{p-1}$ design.
-\item Complete the design by the $p^{th}$ column, which is calculated by:
+    \item Write down a full factorial $2^{p-1}$ design.
+    \item Complete the design by the $p^{th}$ column, which is calculated by:
 
-$$
-p = 123...(p-1)
-$$
+    $$
+        p = 123...(p-1)
+    $$
+\end{enumerate}
 
 In our case, p is:
-$$123 = \text{V112}*\text{V104}*\text{Pump Voltage}$$
+$$123 = \text{V112} \cdot \text{V104} \cdot V_{pump}$$
+
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[scale=0.7]{frc_effect_pareto}
+    \end{center}
+    \caption{Reduced Effects Pareto}
+\end{figure}
+
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[scale=1]{frc_effect_probability_plot}
+    \end{center}
+    \caption{Reduced Effects Pareto}
+\end{figure}
 
 
-\end{enumerate}
+
+
+
