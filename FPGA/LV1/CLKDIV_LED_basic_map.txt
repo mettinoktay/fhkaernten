@@ -1,0 +1,4 @@
+CLKDIV_LED_basic/clkdiv0.37hz --> clkdiv0_37hz
+CLKDIV_LED_basic/clkdiv6hz --> clkdiv6hz
+CLKDIV_LED_basic/ledcntrl --> ledcntrl
+CLKDIV_LED_basic --> CLKDIV_LED_basic
