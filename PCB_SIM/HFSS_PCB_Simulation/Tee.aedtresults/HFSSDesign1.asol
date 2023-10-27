@@ -1,0 +1,282 @@
+$begin '$base_index$'
+  $begin 'properties'
+    all_levels=000000000000
+    time(year=000000002023, month=000000000010, day=000000000025, hour=000000000011, min=000000000043, sec=000000000057)
+    version=000000000000
+  $end 'properties'
+  $begin '$base_index$'
+    $index$(pos=000000007973, lin=000000000261, lvl=000000000000)
+  $end '$base_index$'
+$end '$base_index$'
+$begin 'SolutionBlock1'
+	ProductName=''
+	CircuitName='HFSSDesign1'
+	VersionID=23
+	PostProcess=false
+	LossLess=true
+	NextUniqueID=195
+	MoveBackwards=false
+	$begin 'VariationIDs'
+		Map(V='Offset=\'0.20000000000000001in\'', ID=113)
+		Map(V='Offset=\'0.29999999999999999in\'', ID=174)
+		Map(V='Offset=\'0in\'', ID=28)
+	$end 'VariationIDs'
+	$begin 'LinkedDataList'
+	$end 'LinkedDataList'
+	$begin 'InitialMeshes'
+		M(VID=28, Ver=23, Dir='DV28_V23.imesh/')
+		M(VID=113, Ver=23, Dir='DV113_V23.imesh/')
+	$end 'InitialMeshes'
+	MeshAssemVersionID=15
+	$begin 'NextAssemVersionID'
+		NextUniqueID=16
+		MoveBackwards=false
+	$end 'NextAssemVersionID'
+	$begin 'DefinitionMeshes'
+		$begin 'DefMeshes_Comp-1'
+			DefinitionID=-1
+			VersionID=14
+			VIDMap('Offset=\'0.20000000000000001in\'', 114, 'Offset=\'0in\'', 84)
+			DM(VID=84, Ver=14, Dir='NDV84_V14.dmesh/')
+			DM(VID=114, Ver=14, Dir='NDV114_V14.dmesh/')
+		$end 'DefMeshes_Comp-1'
+	$end 'DefinitionMeshes'
+	$begin 'MI'
+		$begin 'SubData'
+			ID=0
+			MI(VID=28, Ver=23, Dir='DV28_MI0_V23.sd/')
+			MI(VID=113, Ver=23, Dir='DV113_MI0_V23.sd/')
+		$end 'SubData'
+	$end 'MI'
+	VersionID2=0
+$end 'SolutionBlock1'
+$begin 'BlockMapName'
+	FileHeader='SolutionBlock1'
+	'SolutionKey(SimSetup=25, Instance=\'SetupDefinition\', Solution=-1, VersionID=0)'='SolutionBlock5'
+	'SolutionKey(SimSetup=25, Instance=\'SolutionDefinition\', Solution=26, VersionID=0)'='SolutionBlock2'
+	'SolutionKey(SimSetup=25, Instance=\'SolutionDefinition\', Solution=27, VersionID=0)'='SolutionBlock3'
+	'SolutionKey(SimSetup=25, Instance=\'SolutionDefinition\', Solution=31, VersionID=0)'='SolutionBlock4'
+$end 'BlockMapName'
+$begin 'SolutionBlock2'
+	SolutionName='AdaptivePass'
+	SolutionID=26
+	V=0
+	$begin 'States'
+		F(VID=28, Ver=0)
+		F(VID=113, Ver=0)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies(10000000000)
+		SolutionType=6
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=-1
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=1
+			M(VID=28, Ver=0, File='DV28_SOL26_M1_V0.sd')
+			M(VID=113, Ver=0, File='DV113_SOL26_M1_V0.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=2
+			M(VID=28, Ver=0, File='DV28_SOL26_M2_V0.sd')
+			M(VID=113, Ver=0, File='DV113_SOL26_M2_V0.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=3
+			M(VID=28, Ver=0, File='DV28_SOL26_M3_V0.sd')
+			M(VID=113, Ver=0, File='DV113_SOL26_M3_V0.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=4
+			M(VID=28, Ver=0, File='DV28_SOL26_M4_V0.sd')
+			M(VID=113, Ver=0, File='DV113_SOL26_M4_V0.sd')
+		$end 'SubData'
+	$end 'M'
+$end 'SolutionBlock2'
+$begin 'SolutionBlock3'
+	SolutionName='LastAdaptive'
+	SolutionID=27
+	V=0
+	$begin 'States'
+		F(VID=28, Ver=0)
+		F(VID=113, Ver=0)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies(10000000000)
+		SolutionType=6
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=-1
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=0
+			M(VID=28, Ver=0, File='DV28_SOL27_M0_V0.sd')
+			M(VID=113, Ver=0, File='DV113_SOL27_M0_V0.sd')
+		$end 'SubData'
+	$end 'M'
+	$begin 'Fields'
+		IDDblMap(89, 10000000000)
+		$begin 'DataMap'
+			VID=28
+			Ver=0
+			F(DblID=89, Dir='DV28_S27_V0_F89/')
+		$end 'DataMap'
+		$begin 'DataMap'
+			VID=113
+			Ver=0
+			F(DblID=89, Dir='DV113_S27_V0_F89/')
+		$end 'DataMap'
+	$end 'Fields'
+$end 'SolutionBlock3'
+$begin 'SolutionBlock4'
+	SolutionName='Sweep1'
+	SolutionID=31
+	V=0
+	$begin 'States'
+		F(VID=28, Ver=0)
+		F(VID=113, Ver=0)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies(8000000000, 8050000000.000001, 8100000000, 8150000000, 8199999999.999999, 8250000000, 8300000000.000001, 8350000000, 8400000000, 8449999999.999999, 8500000000, 8550000000.000001, 8600000000, 8650000000, 8700000000, 8750000000, 8800000000, 8850000000, 8900000000, 8950000000, 9000000000, 9050000000, 9100000000, 9150000000, 9200000000, 9250000000, 9300000000, 9350000000, 9400000000, 9450000000, 9500000000, 9550000000, 9600000000, 9650000000, 9700000000, 9750000000, 9800000000, 9850000000, 9900000000, 9950000000, 10000000000)
+		SolutionType=5
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=0
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=0
+			M(VID=28, Ver=0, File='DV28_SOL31_M0_V0.sd')
+			M(VID=113, Ver=0, File='DV113_SOL31_M0_V0.sd')
+		$end 'SubData'
+	$end 'M'
+	$begin 'TransientSolveStauts'
+		SS(VID=28, Ver=0, SS=1)
+		SS(VID=113, Ver=0, SS=1)
+	$end 'TransientSolveStauts'
+	$begin 'SolverUsage'
+		IDDblMap(104, 8000000000, 105, 9000000000, 106, 8500000000, 107, 9500000000, 108, 8750000000, 109, 8249999999.999999, 110, 9750000000, 111, 8124999999.999998, 112, 8375000000)
+		$begin 'DataMap'
+			VID=28
+			Ver=0
+			SU(DblID=104, SU='DV28_S31_V0_F104_SU.txt')
+			SU(DblID=111, SU='DV28_S31_V0_F111_SU.txt')
+			SU(DblID=109, SU='DV28_S31_V0_F109_SU.txt')
+			SU(DblID=112, SU='DV28_S31_V0_F112_SU.txt')
+			SU(DblID=106, SU='DV28_S31_V0_F106_SU.txt')
+			SU(DblID=108, SU='DV28_S31_V0_F108_SU.txt')
+			SU(DblID=105, SU='DV28_S31_V0_F105_SU.txt')
+			SU(DblID=107, SU='DV28_S31_V0_F107_SU.txt')
+			SU(DblID=110, SU='DV28_S31_V0_F110_SU.txt')
+		$end 'DataMap'
+		$begin 'DataMap'
+			VID=113
+			Ver=0
+			SU(DblID=104, SU='DV113_S31_V0_F104_SU.txt')
+			SU(DblID=111, SU='DV113_S31_V0_F111_SU.txt')
+			SU(DblID=109, SU='DV113_S31_V0_F109_SU.txt')
+			SU(DblID=112, SU='DV113_S31_V0_F112_SU.txt')
+			SU(DblID=106, SU='DV113_S31_V0_F106_SU.txt')
+			SU(DblID=108, SU='DV113_S31_V0_F108_SU.txt')
+			SU(DblID=105, SU='DV113_S31_V0_F105_SU.txt')
+			SU(DblID=107, SU='DV113_S31_V0_F107_SU.txt')
+			SU(DblID=110, SU='DV113_S31_V0_F110_SU.txt')
+		$end 'DataMap'
+	$end 'SolverUsage'
+$end 'SolutionBlock4'
+$begin 'SolutionBlock5'
+	SimSetupID=25
+	SimSetupName='Setup1'
+	VersionID=0
+	$begin 'EmConvergenceData'
+		EmConv(VID=28, Ver=0, EmConv='DV28_S25_V0.EMConvData')
+		EmConv(VID=113, Ver=0, EmConv='DV113_S25_V0.EMConvData')
+	$end 'EmConvergenceData'
+	IsImported=false
+	IsTable=false
+	SolveSetupID=0
+	$begin 'CurrMeshes'
+		M(VID=28, Ver=0, Dir='DV28_S25_V0.cmesh/')
+		M(VID=113, Ver=0, Dir='DV113_S25_V0.cmesh/')
+	$end 'CurrMeshes'
+	MeshAssemVersionID=0
+	$begin 'NextAssemVersionID'
+		NextUniqueID=1
+		MoveBackwards=false
+	$end 'NextAssemVersionID'
+	$begin 'ADP'
+		$begin 'SubData'
+			ID=4
+			ADP(VID=28, Ver=0, Dir='DV28_S25_ADP4_V0.sd/')
+			ADP(VID=113, Ver=0, Dir='DV113_S25_ADP4_V0.sd/')
+		$end 'SubData'
+	$end 'ADP'
+	$begin 'SU'
+		$begin 'SubData'
+			ID=1
+			SU(VID=28, Ver=0, File='DV28_S25_SD1_V0.su')
+			SU(VID=113, Ver=0, File='DV113_S25_SD1_V0.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=2
+			SU(VID=28, Ver=0, File='DV28_S25_SD2_V0.su')
+			SU(VID=113, Ver=0, File='DV113_S25_SD2_V0.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=3
+			SU(VID=28, Ver=0, File='DV28_S25_SD3_V0.su')
+			SU(VID=113, Ver=0, File='DV113_S25_SD3_V0.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=4
+			SU(VID=28, Ver=0, File='DV28_S25_SD4_V0.su')
+			SU(VID=113, Ver=0, File='DV113_S25_SD4_V0.su')
+		$end 'SubData'
+	$end 'SU'
+	$begin 'WaveAdapt'
+		WA(VID=28, Ver=0, A=1)
+		WA(VID=113, Ver=0, A=1)
+	$end 'WaveAdapt'
+	$begin 'LastPassNumbers'
+		LP(VID=28, Ver=0, P=4)
+		LP(VID=113, Ver=0, P=4)
+	$end 'LastPassNumbers'
+	$begin 'Profiles'
+		P(VID=28, Ver=0, File='DV28_S25_V0.profile')
+		P(VID=113, Ver=0, File='DV113_S25_V0.profile')
+	$end 'Profiles'
+	$begin 'MI'
+		$begin 'SubData'
+			ID=0
+			MI(VID=28, Ver=0, Dir='DV28_S25_MI0_V0.sd/')
+			MI(VID=113, Ver=0, Dir='DV113_S25_MI0_V0.sd/')
+		$end 'SubData'
+	$end 'MI'
+$end 'SolutionBlock5'
+$begin '$index$'
+	$begin '$index$'
+		BlockMapName(pos=1512, lin=43, lvl=0)
+		SolutionBlock2(pos=1996, lin=50, lvl=0)
+		SolutionBlock3(pos=2981, lin=92, lvl=0)
+		SolutionBlock4(pos=3790, lin=132, lvl=0)
+		SolutionBlock5(pos=6156, lin=192, lvl=0)
+		SolutionBlock1(pos=370, lin=1, lvl=0)
+		$base_index$(pos=0, lin=1, lvl=0)
+		$index$(pos=7973, lin=261, lvl=0)
+	$end '$index$'
+$end '$index$'

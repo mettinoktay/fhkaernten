@@ -1,0 +1,7 @@
+$begin 'ValidationCache'
+	$begin 'OneValidationResult'
+		Variation='Offset=\'0in\''
+		Status=true
+		FileName='VI018C18316169822535815.tmp'
+	$end 'OneValidationResult'
+$end 'ValidationCache'
