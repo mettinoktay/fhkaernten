@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;fft_example/MARTA_Demo.ioc&apos; to &apos;final_project.ioc&apos;" description="Rename resource &apos;MARTA_Demo.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="MARTA_Demo.ioc" name="final_project.ioc" stamp="1701021492627" updateReferences="true"/>
+</session>

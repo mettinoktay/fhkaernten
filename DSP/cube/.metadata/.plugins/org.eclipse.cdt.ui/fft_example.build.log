@@ -1,0 +1,17 @@
+20:04:35 **** Build of configuration Debug for project fft_example ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CMSIS/DSP/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "fft_example.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\metti\Documents\GitHub\fhkaernten\DSP\cube\fft_example\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fft_example.map" -Wl,--gc-sections -static -L../Drivers/CMSIS/Lib/GCC --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fft_example.elf
+ 
+arm-none-eabi-size   fft_example.elf 
+arm-none-eabi-objdump -h -S  fft_example.elf  > "fft_example.list"
+   text	   data	    bss	    dec	    hex	filename
+   4688	     20	   1572	   6280	   1888	fft_example.elf
+Finished building: default.size.stdout
+ 
+Finished building: fft_example.list
+ 
+
+20:04:36 Build Finished. 0 errors, 0 warnings. (took 1s.179ms)
+

@@ -1,0 +1,16 @@
+20:12:42 **** Incremental Build of configuration Debug for project final_project ****
+make -j12 all 
+arm-none-eabi-gcc -o "final_project.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\metti\Documents\GitHub\fhkaernten\DSP\cube\final_project\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="final_project.map" -Wl,--gc-sections -static -L../Drivers/CMSIS/Lib/GCC --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: final_project.elf
+ 
+arm-none-eabi-size  final_project.elf 
+arm-none-eabi-objdump -h -S final_project.elf  > "final_project.list"
+   text	   data	    bss	    dec	    hex	filename
+  10532	     20	   1788	  12340	   3034	final_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: final_project.list
+ 
+
+20:12:43 Build Finished. 0 errors, 0 warnings. (took 965ms)
+

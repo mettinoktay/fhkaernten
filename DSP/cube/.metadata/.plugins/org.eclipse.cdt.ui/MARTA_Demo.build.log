@@ -1,0 +1,17 @@
+15:37:52 **** Incremental Build of configuration Debug for project MARTA_Demo ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/metti/Desktop/DONTMODIFY_MARTA_Demo/MARTA_Demo/Core/lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MARTA_Demo.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\metti\Desktop\DONTMODIFY_MARTA_Demo\MARTA_Demo\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MARTA_Demo.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MARTA_Demo.elf
+ 
+arm-none-eabi-size  MARTA_Demo.elf 
+arm-none-eabi-objdump -h -S MARTA_Demo.elf  > "MARTA_Demo.list"
+   text	   data	    bss	    dec	    hex	filename
+  41772	    512	   3368	  45652	   b254	MARTA_Demo.elf
+Finished building: default.size.stdout
+ 
+Finished building: MARTA_Demo.list
+ 
+
+15:37:54 Build Finished. 0 errors, 0 warnings. (took 2s.221ms)
+

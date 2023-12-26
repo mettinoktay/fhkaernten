@@ -1,0 +1,11 @@
+connections/org.eclipse.remote.serial.core.connectionType/MARTA/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/MARTA/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/MARTA/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/MARTA/serial.portName=COM3
+connections/org.eclipse.remote.serial.core.connectionType/MARTA/serial.stopBits=0
+connections/org.eclipse.remote.serial.core.connectionType/MARTA_2/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/MARTA_2/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/MARTA_2/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/MARTA_2/serial.portName=COM3
+connections/org.eclipse.remote.serial.core.connectionType/MARTA_2/serial.stopBits=0
+eclipse.preferences.version=1

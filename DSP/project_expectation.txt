@@ -1,0 +1,10 @@
+"
+you have a signal source - microphone, accelerometer, color sensor etc... check MARTA board documentation.
+come up with an idea regarding the processing of this signal.
+then consider what your output will be - it should be related to your process of course.
+until 21st of november, consider these points. then present your idea to professor.
+aim to finish your project before christmas. scale the project down. professor wants to see your core compentences.
+project description will contain purpose, a user manual, a block diagram of hw and sw components
+and how they interact with each other. block diagram is the most important piece for the professor.
+be creative. talk to each other. omit weather station idea.
+"
